@@ -1,12 +1,16 @@
 ---
-source-git-commit: 83bc0c58ce23d755a82a4b4e4fff44cdc237c74d
+source-git-commit: a55ebe5108c5a61f53ae0ffc7e625d8b93f8a813
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '69'
-ht-degree: 0%
+source-wordcount: '151'
+ht-degree: 3%
 
 ---
 # Adobe 자산 계산 서비스 설명서
+
+| EXL-PR | EXL | 미리 보기 | 활성화 | 게시됨 | 도움말 |
+|--- |--- |--- |--- |--- |--- |
+| [![빌드 상태](https://docs.ci.corp.adobe.com/view/exl-pr/job/asset-compute.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/asset-compute.en_pr-exl/lastBuild/) | [![빌드 상태](https://docs.ci.corp.adobe.com/view/exl-pr/job/asset-compute.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/asset-compute.en_exl/lastBuild/lastBuild) | [미리 보기 URL](https://experienceleague.corp.adobe.com/docs/asset-compute/using/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [라이브 URL](https://experienceleague.adobe.com/docs/asset-compute/using/home.html?lang=en) | [작성 안내서](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 문서 보관소입니다 [!DNL Adobe Asset Compute Service].
 

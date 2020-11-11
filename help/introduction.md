@@ -2,10 +2,10 @@
 title: 유용한 [!DNL Asset Compute Service]소개
 description: '[!DNL Asset Compute Service] 은 복잡성을 줄이고 확장성을 개선하는 클라우드 기반의 자산 처리 서비스입니다.'
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 2%
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->현재, 이 [!DNL Asset Compute Service] 는 Cloud Service [!DNL Experience Manager] 를 통해서만 사용할 수 있습니다. 관리자는 처리를 위해 자산을 전달하도록 호출할 수 [!DNL Asset Compute Service] 있는 처리 프로필을 만듭니다. See [use asset microservices and processing profiles](https://docs.adobe.com/content/help/ko-KR/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>현재, 이 [!DNL Asset Compute Service] 는 Cloud Service [!DNL Experience Manager] 를 통해서만 사용할 수 있습니다. 관리자는 처리를 위해 자산을 전달하도록 호출할 수 [!DNL Asset Compute Service] 있는 처리 프로필을 만듭니다. See [use asset microservices and processing profiles](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## 지원되는 사용 사례: [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
 [!DNL Asset Compute Service] 기본 이미지 처리와 같은 몇 가지 일반적인 비즈니스 사용 사례를 지원합니다.Adobe 애플리케이션별 전환복잡한 비즈니스 요구 사항을 조정하는 맞춤형 애플리케이션 제작
 
-웹 서비스 [!DNL Asset Compute] 를 사용하여 다양한 파일 유형에 대한 축소판, [지원되는 파일 포맷에 대한 고품질 이미지 렌더링 등을 생성할 수 있습니다](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html). 사용자 [지정 구성을 통해 지원되는 사용 사례를 참조하십시오](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#custom-config).
+웹 서비스 [!DNL Asset Compute] 를 사용하여 다양한 파일 유형에 대한 축소판, [지원되는 파일 포맷에 대한 고품질 이미지 렌더링 등을 생성할 수 있습니다](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html). 사용자 [지정 구성을 통해 지원되는 사용 사례를 참조하십시오](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -45,10 +45,10 @@ ht-degree: 2%
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager에서 Cloud Service으로 자산 마이크로 서비스를 사용한 자산 처리 개요](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [Adobe Experience Manager에서 Cloud Service으로 자산 마이크로 서비스를 사용한 자산 처리 개요](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html)설명서
->* [파일 형식을 사용하여 처리할 수 있습니다](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html).
->* [자산 계산 서비스의 릴리스 노트](release-notes.md)
+>* [파일 형식을 사용하여 처리할 수 있습니다](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
+>* [asset compute 서비스의 릴리스 노트](release-notes.md)
 
 
 <!-- **TBD:**

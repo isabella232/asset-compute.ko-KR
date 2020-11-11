@@ -2,9 +2,9 @@
 title: 개발 대상 [!DNL Asset Compute Service].
 description: 를 사용하여 사용자 정의 응용 프로그램을 만듭니다 [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 127895cf1bab59546f9ba0be2b3b7a935627effb
+source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Adobe [I/O CLI를 로컬로](https://github.com/adobe/aio-cli) 설치했는지 �
 
    Firefly 앱의 [주요 구성 요소에 대해 여기를 참조하십시오](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
 
-   템플릿 응용 프로그램은 응용 프로그램 표현물의 업로드, 다운로드 및 [](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) 편성을 위해 Adobe의 Asset Compute SDK를 활용하므로 개발자는 사용자 정의 응용 프로그램 로직만 구현해야 합니다. 폴더 `actions/<worker-name>` 내에서 `index.js` 사용자 지정 응용 프로그램 코드를 추가할 위치입니다.
+   템플릿 애플리케이션은 애플리케이션 표현물의 업로드, 다운로드 및 [편성을 위해 Adobe](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) Asset compute SDK를 활용하므로 개발자는 맞춤형 애플리케이션 로직만 구현하면 됩니다. 폴더 `actions/<worker-name>` 내에서 `index.js` 사용자 지정 응용 프로그램 코드를 추가할 위치입니다.
 
 사용자 정의 응용 프로그램에 대한 예제 및 아이디어는 [사용자 정의 응용 프로그램](#try-sample) 예를 참조하십시오.
 
@@ -82,7 +82,7 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 
 >[!NOTE]
 >
->이는 Cloud Service의 클라우드 스토리지와 [!DNL Adobe Experience Manager] 별개입니다. Asset Compute 개발자 도구를 사용한 개발 및 테스트에만 적용됩니다.
+>이는 Cloud Service의 클라우드 스토리지와 [!DNL Adobe Experience Manager] 별개입니다. asset compute 개발자 도구를 사용한 개발 및 테스트에만 적용됩니다.
 
 [지원되는 클라우드 스토리지 컨테이너에 액세스할 수 있는지 확인하십시오](https://github.com/adobe/asset-compute-devtool#prerequisites). 필요에 따라 여러 프로젝트에서 여러 개발자가 이 컨테이너를 공유할 수 있습니다.
 
@@ -94,6 +94,12 @@ Firefly 프로젝트 루트의 ENV 파일에 개발자 도구에 대한 다음 �
 
    ```conf
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
+   ```
+
+1. Firefox 앱 `console.json` 의 루트에 없는 경우 Adobe 개발자 콘솔 통합 JSON 파일에 절대 경로를 추가합니다. 프로젝트 작업 영역에서 다운로드한 파일과 동일한 [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) 파일입니다. 또는 ENV 파일에 경로를 추가하는 `aio app use <path_to_console_json>` 대신 명령을 사용할 수도 있습니다.
+
+   ```conf
+   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
    ```
 
 1. S3 또는 Azure 저장소 자격 증명을 추가합니다. 하나의 클라우드 스토리지 솔루션만 액세스하면 됩니다.
@@ -113,7 +119,7 @@ Firefly 프로젝트 루트의 ENV 파일에 개발자 도구에 대한 다음 �
 
 ## 애플리케이션 실행 {#run-custom-application}
 
-에셋 컴퓨팅 개발자 도구를 사용하여 응용 프로그램을 실행하기 전에 자격 증명을 [적절하게 구성하십시오](#developer-tool-credentials).
+asset compute 개발자 도구를 사용하여 응용 프로그램을 실행하기 전에 자격 증명을 [올바르게 구성합니다](#developer-tool-credentials).
 
 개발자 도구에서 응용 프로그램을 실행하려면 `aio app run` 명령을 사용합니다. 동작을 Adobe I/O Runtime에 배포하고 로컬 시스템에서 개발 도구를 시작합니다. 이 도구는 개발 중에 응용 프로그램 요청을 테스트하는 데 사용됩니다. 다음은 변환 요청의 예입니다.
 
@@ -128,7 +134,7 @@ Firefly 프로젝트 루트의 ENV 파일에 개발자 도구에 대한 다음 �
 
 >[!NOTE]
 >
->명령에는 `--local` 플래그를 사용하지 `run` 마십시오. 사용자 정의 응용 프로그램 및 Asset Compute Developer 도구에서는 작동하지 않습니다. [!DNL Asset Compute] 사용자 지정 응용 프로그램은 개발자의 로컬 시스템에서 실행되는 작업에 액세스할 수 없는 사용자 지정 응용 프로그램 [!DNL Asset Compute Service] 에 의해 호출됩니다.
+>명령에는 `--local` 플래그를 사용하지 `run` 마십시오. 사용자 정의 응용 프로그램 및 Asset compute 개발자 도구에서는 작동하지 않습니다. [!DNL Asset Compute] 사용자 지정 응용 프로그램은 개발자의 로컬 시스템에서 실행되는 작업에 액세스할 수 없는 사용자 지정 응용 프로그램 [!DNL Asset Compute Service] 에 의해 호출됩니다.
 
 애플리케이션을 테스트하고 디버그하는 [방법은 여기를](test-custom-application.md) 참조하십시오. 사용자 정의 애플리케이션 개발이 끝나면 사용자 정의 응용 프로그램을 [배포합니다](deploy-custom-application.md).
 
@@ -208,7 +214,7 @@ exports.main = worker(async function (source, rendition) {
 
 ## 인증 및 인증 지원 {#authentication-authorization-support}
 
-기본적으로 Asset Compute 사용자 지정 응용 프로그램은 Firefox 응용 프로그램에 대한 인증 및 인증 검사와 함께 제공됩니다. 주석을 에서 `require-adobe-auth` 로 설정하여 이 `true` 를 활성화할 수 `manifest.yml`있습니다.
+기본적으로 Asset compute 사용자 정의 응용 프로그램은 Firefox 응용 프로그램에 대한 인증 및 인증 검사와 함께 제공됩니다. 주석을 에서 `require-adobe-auth` 로 설정하여 이 `true` 를 활성화할 수 `manifest.yml`있습니다.
 
 ### 다른 Adobe API 액세스 {#access-adobe-apis}
 
@@ -272,14 +278,14 @@ const key = params.secretKey;
           concurrency: 1
 ```
 
-일반적으로 에셋 컴퓨팅 애플리케이션에서 수행하는 보다 광범위한 처리 때문에 최적의 성능(바이너리 에셋을 처리할 수 있을 정도로 크기)과 효율성을 위해 이러한 제한을 조정해야 할 가능성이 높습니다(사용되지 않은 컨테이너 메모리로 인해 리소스를 낭비하지 않음).
+일반적으로 Asset compute 애플리케이션에서 수행하는 보다 광범위한 처리 기능으로 인해 최적의 성능(바이너리 에셋을 처리할 수 있을 정도로 크기)과 효율성(사용되지 않은 컨테이너 메모리로 인해 리소스를 낭비하지 않음)을 위해 이러한 제한을 조정해야 할 가능성이 높습니다.
 
 Runtime의 작업에 대한 기본 시간 제한은 1분이지만, 제한(밀리초)을 설정하여 `timeout` 늘릴 수 있습니다. 더 큰 파일을 처리하려면 이 시간을 늘리십시오. 소스를 다운로드하고 파일을 처리하고 변환을 업로드하는 데 걸리는 총 시간을 고려합니다. 작업 시간이 초과되는 경우, 즉 지정된 제한 시간 이전에 활성화를 반환하지 않는 경우, 런타임은 컨테이너를 삭제하고 다시 사용하지 않습니다.
 
-에셋 컴퓨팅 애플리케이션은 일반적으로 네트워크 및 디스크 IO 바인딩된 애플리케이션입니다. 소스 파일을 먼저 다운로드해야 하고, IO가 많은 경우가 많으며, 따라서 변환이 다시 업로드됩니다.
+기본적으로 asset compute 애플리케이션은 네트워크 및 디스크 IO 바인딩되는 경향이 있습니다. 소스 파일을 먼저 다운로드해야 하고, IO가 많은 경우가 많으며, 따라서 변환이 다시 업로드됩니다.
 
 작업 컨테이너에 사용할 수 있는 메모리는 MB `memorySize` 로 지정됩니다. 현재 이 설정은 컨테이너가 받는 CPU 액세스 수량도 정의하며, 가장 중요한 것은 Runtime 사용 비용의 핵심 요소입니다(더 큰 컨테이너 비용 증가). 처리 시 더 많은 메모리 또는 CPU가 필요할 때 여기에 더 큰 값을 사용하되, 컨테이너가 더 큰 만큼 리소스를 낭비하지 않도록 주의하십시오.
 
-또한 설정을 사용하여 컨테이너 내의 작업 동시 사용을 제어할 수 `concurrency` 있습니다. 단일 컨테이너(동일한 작업)가 가져오는 동시 활성화 수입니다. 이 모델에서 작업 컨테이너는 최대 해당 제한까지 여러 개의 동시 요청을 받는 Node.js 서버와 같습니다. 설정하지 않으면 런타임의 기본값은 200으로, 작은 Firefly 작업에는 아주 좋으나, 일반적으로 Asset Compute 응용 프로그램이 보다 집약적인 로컬 처리 및 디스크 작업을 제공했을 때는 너무 큽니다. 구현에 따라 일부 응용 프로그램이 동시 활동에서 제대로 작동하지 않을 수도 있습니다. 자산 계산 SDK에서는 여러 고유한 폴더에 파일을 작성하여 활성화가 구분되도록 합니다.
+또한 설정을 사용하여 컨테이너 내의 작업 동시 사용을 제어할 수 `concurrency` 있습니다. 단일 컨테이너(동일한 작업)가 가져오는 동시 활성화 수입니다. 이 모델에서 작업 컨테이너는 최대 해당 제한까지 여러 개의 동시 요청을 받는 Node.js 서버와 같습니다. 설정하지 않으면 런타임의 기본값은 200으로, 작은 Firefly 액션에는 아주 좋으나, 일반적으로 Asset compute 응용 프로그램이 보다 집약적인 로컬 처리 및 디스크 작업을 제공했을 때는 너무 큽니다. 구현에 따라 일부 응용 프로그램이 동시 활동에서 제대로 작동하지 않을 수도 있습니다. asset compute SDK에서는 여러 고유한 폴더에 파일을 작성하여 활성화가 구분되도록 합니다.
 
 응용 프로그램을 테스트하여 `concurrency` 및 `memorySize`. 대용량 컨테이너 = 메모리 용량이 클수록 동시 시청 횟수가 늘어날 수 있지만, 트래픽 저하를 위한 낭비도 발생할 수 있습니다.

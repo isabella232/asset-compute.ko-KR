@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] HTTP API.'
 description: '[!DNL Asset Compute Service] 사용자 정의 애플리케이션을 만드는 HTTP API'
 translation-type: tm+mt
-source-git-commit: 18e97e544014933e9910a12bc40246daa445bf4f
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2925'
 ht-degree: 2%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL Asset Compute Service] HTTP API {#asset-compute-http-api}
 
-API의 사용은 개발 용도로 제한됩니다. API는 사용자 지정 애플리케이션을 개발할 때 컨텍스트로 제공됩니다. [!DNL Adobe Experience Manager] as a Cloud Service은 API를 사용하여 처리 정보를 사용자 지정 애플리케이션에 전달합니다. 자세한 내용은 자산 마이크로서비스 [및 처리 프로필 사용을 참조하십시오](https://docs.adobe.com/content/help/ko-KR/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+API의 사용은 개발 용도로 제한됩니다. API는 사용자 지정 애플리케이션을 개발할 때 컨텍스트로 제공됩니다. [!DNL Adobe Experience Manager] as a Cloud Service은 API를 사용하여 처리 정보를 사용자 지정 애플리케이션에 전달합니다. 자세한 내용은 자산 마이크로서비스 [및 처리 프로필 사용을 참조하십시오](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ HTTP [!DNL Asset Compute Service] API의 모든 클라이언트는 다음과 같
 * 기본
    * scopes: `openid,AdobeID`
 
-* 자산 계산
+* asset compute
    * metascope: `asset_compute_meta`
    * scopes: `asset_compute,read_organizations`
 
@@ -349,7 +349,7 @@ URL로 `source` 보이는 URL이거나 추가 필드가 있는 URL `<string>` `<
 
 ## 사후 처리 옵트인 {#opt-in-to-post-processing}
 
-자산 [계산 SDK는](https://github.com/adobe/asset-compute-sdk) 기본 이미지 사후 처리 옵션 집합을 지원합니다. 사용자 지정 작업자는 변환 객체의 필드를 다음으로 설정하여 게시 처리 `postProcess` 에 명시적으로 선택할 수 있습니다 `true`.
+asset compute [SDK는](https://github.com/adobe/asset-compute-sdk) 일련의 기본 이미지 사후 처리 옵션을 지원합니다. 사용자 지정 작업자는 변환 객체의 필드를 다음으로 설정하여 게시 처리 `postProcess` 에 명시적으로 선택할 수 있습니다 `true`.
 
 지원되는 사용 사례는 다음과 같습니다.
 
@@ -362,7 +362,7 @@ URL로 `source` 보이는 URL이거나 추가 필드가 있는 URL `<string>` `<
 
 ## 워터마크 에셋 {#add-watermark}
 
-Asset [Compute SDK는](https://github.com/adobe/asset-compute-sdk) PNG, JPEG, TIFF 및 GIF 이미지 파일에 워터마크를 추가할 수 있도록 지원합니다. 변환에 있는 개체의 변환 지침에 따라 워터마크가 `watermark` 추가됩니다.
+asset compute SDK는 [PNG, JPEG, TIFF 및 GIF 이미지 파일에 워터마크를 추가할](https://github.com/adobe/asset-compute-sdk) 수 있도록 지원합니다. 변환에 있는 개체의 변환 지침에 따라 워터마크가 `watermark` 추가됩니다.
 
 변환 사후 처리 중에 워터마크가 수행됩니다. 자산에 워터마크를 적용하려면 [사용자 지정 작업자는 변환 개체의 필드를 다음으로 설정하여](#opt-in-to-post-processing) 사후 처리 `postProcess` 에 `true`들어갑니다. 워커가 옵트인을 하지 않으면 워터마크 개체가 요청의 변환 개체에 설정되어 있어도 워터마크가 적용되지 않습니다.
 
@@ -374,7 +374,7 @@ Asset [Compute SDK는](https://github.com/adobe/asset-compute-sdk) PNG, JPEG, TI
 
 | 이름 | 유형 | 설명 | 예 |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | 변환 대상 형식은 텍스트 추출 및 XMP 메타데이터를 xml `text` 로 추출하는 `xmp` 용이기도 합니다. 지원되는 [형식 보기](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
+| `fmt` | `string` | 변환 대상 형식은 텍스트 추출 및 XMP 메타데이터를 xml `text` 로 추출하는 `xmp` 용이기도 합니다. 지원되는 [형식 보기](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | 사용자 [지정 응용 프로그램의 URL](develop-custom-application.md). URL이어야 `https://` 합니다. 이 필드가 있으면 사용자 정의 응용 프로그램에서 변환이 만들어집니다. 그러면 다른 모든 세트 변환 필드가 사용자 정의 응용 프로그램에서 사용됩니다. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | HTTP PUT을 사용하여 생성된 변환을 업로드해야 하는 URL. | `http://w.com/img.jpg` |
 | `target` | `object` | 생성된 변환에 대한 여러 부분으로 사전에 서명된 URL 업로드 정보. 이 다중 부분 업로드 비헤이비어가 포함된 [AEM/Oak 직접 바이너리](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) 업로드에 [사용됩니다](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>필드:<ul><li>`urls`:문자열 배열, 사전 서명된 각 부분 URL에 대해 하나씩</li><li>`minPartSize`:한 부분에 사용할 최소 크기 = url</li><li>`maxPartSize`:한 부분에 사용할 최대 크기 = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
@@ -382,7 +382,7 @@ Asset [Compute SDK는](https://github.com/adobe/asset-compute-sdk) PNG, JPEG, TI
 
 ### 변환 특정 필드 {#rendition-specific-fields}
 
-현재 지원되는 파일 형식 목록은 [지원되는 파일 형식을 참조하십시오](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html).
+현재 지원되는 파일 형식 목록은 [지원되는 파일 형식을 참조하십시오](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 | 이름 | 유형 | 설명 | 예 |
 |-------------------|----------|-------------|---------|

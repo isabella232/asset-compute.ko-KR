@@ -1,9 +1,9 @@
 ---
-source-git-commit: 324f414164ccbb712e7197ddc68075ea9c238cae
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '519'
-ht-degree: 4%
+source-wordcount: '518'
+ht-degree: 2%
 
 ---
 # 문서에 기여
@@ -59,4 +59,4 @@ Adobe 직원이고 기여도가 있는 경우 회사 git의 `AdobeDocs` 조직�
 
 ## 추가 정보
 
-GitHub 저작 플랫폼 및 지원되는 [마크다운 구문의 사용 방법에 대한 자세한 내용은](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) Adobe Docs Contributor Guide를 참조하십시오.
+GitHub 저작 플랫폼 및 지원되는 [마크다운 구문의 사용 방법에 대한 자세한 내용은](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) Adobe Docs Contributor Guide를 참조하십시오.

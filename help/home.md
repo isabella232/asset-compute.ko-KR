@@ -2,9 +2,9 @@
 title: '[!DNL Adobe Asset Compute Service] 사용 안내서.'
 description: 이 설명서 [!DNL Asset Compute Service] 는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 질문을 다룹니다.
 translation-type: tm+mt
-source-git-commit: 1c2a1dc41296bf26c432c51b5afa20cb07a4c5c5
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '195'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 이 설명서에서는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 [!DNL Asset Compute Service] 주제를 다룹니다. 솔루션 [!DNL Asset Compute Service] 을 살펴보려면 이 [소개를 참조하십시오](introduction.md). 서비스 [를 통해 얻을 수 있는 이점을 살펴보십시오](introduction.md#possible-use-cases-benefits).
 
-[!DNL Asset Compute Service] 다양한 파일 포맷의 변환을 지원하고 다양한 Adobe 서비스와 통합되어 있습니다. 지원되는 파일 포맷 및 서비스 [통합](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html)목록을 참조하십시오.
+[!DNL Asset Compute Service] 다양한 파일 포맷의 변환을 지원하고 다양한 Adobe 서비스와 통합되어 있습니다. 지원되는 파일 포맷 및 서비스 [통합](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)목록을 참조하십시오.
 
 릴리스 관련 정보와 최신 정보는 [릴리스 노트를 참조하십시오](/help/release-notes.md).
 
-Adobe Experience Manager에서 Cloud Service으로 사용할 수 있는 [에셋 마이크로서비스 기능](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html) 및 마이크로 서비스를 사용하는 방법에 대한 개요를 참조하십시오 [!DNL Experience Manager].
+Adobe Experience Manager에서 Cloud Service으로 사용할 수 있는 [에셋 마이크로서비스 기능](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) 및 마이크로 서비스를 사용하는 방법에 대한 개요를 참조하십시오 [!DNL Experience Manager].
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?

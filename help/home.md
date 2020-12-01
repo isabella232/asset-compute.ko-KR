@@ -2,10 +2,10 @@
 title: '[!DNL Adobe Asset Compute Service] 사용 안내서.'
 description: 이 설명서에서는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 작업 [!DNL Asset Compute Service] 에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '190'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 릴리스 관련 정보와 최신 정보는 [릴리스 노트](/help/release-notes.md)를 참조하십시오.
 
-Adobe Experience Manager에서 Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)로 사용할 수 있는 [자산 마이크로서비스 기능과 [!DNL Experience Manager]에서 마이크로서비스를 사용하는 방법에 대한 개요를 참조하십시오.
+[에  [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)에서 사용 가능한 에셋 마이크로서비스 기능과 [!DNL Experience Manager]에서 마이크로서비스를 사용하는 방법에 대한 개요를 참조하십시오. [!DNL Adobe Experience Manager] 
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?

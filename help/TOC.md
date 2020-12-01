@@ -5,7 +5,7 @@ solution: Experience Manager
 type: Documentation
 audience: end-user
 user-guide-title: asset compute 서비스 가이드
-user-guide-description: 이 설명서 [!DNL Asset Compute Service] 는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 질문을 다룹니다.
+user-guide-description: '이 설명서에서는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 작업을 다룹니다. [!DNL Asset Compute Service] '
 breadcrumb-title: asset compute 서비스 가이드
 breadcrumb-url: /docs/asset-compute/using/home.html
 solution-title: AEM Assets
@@ -16,8 +16,8 @@ tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/
 translation-type: tm+mt
 source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 12%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

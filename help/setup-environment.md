@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]에 필요한 개발 환경을 설정합니다.'
 description: '사용자 지정 코드 작성 및 테스트를 시작하기 위한 개발자 환경 설정 [!DNL Asset Compute Service] '
 translation-type: tm+mt
-source-git-commit: 1c2a1dc41296bf26c432c51b5afa20cb07a4c5c5
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 1. 경험 조직에 시스템 관리자 또는 개발자 역할 액세스 권한이 부여됩니다. 이 설정은 [Admin Console](https://adminconsole.adobe.com/overview)에서 시스템 관리자가 설정할 수 있습니다.
 
-1. [Adobe 개발자 콘솔](https://console.adobe.io/)에 로그인합니다. Cloud Service 통합으로 AEM과 동일한 Adobe Experience Cloud 조직에 속하는지 확인합니다. Adobe 개발자 콘솔에 대한 자세한 내용은 [콘솔 문서](https://www.adobe.io/apis/experienceplatform/console/docs.html)를 참조하십시오.
+1. [Adobe 개발자 콘솔](https://console.adobe.io/)에 로그인합니다. [!DNL Cloud Service] 통합 시 AEM과 동일한 Adobe Experience Cloud 조직에 속해 있는지 확인합니다. Adobe 개발자 콘솔에 대한 자세한 내용은 [콘솔 문서](https://www.adobe.io/apis/experienceplatform/console/docs.html)를 참조하십시오.
 
 1. [Firefox 프로젝트](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md) 만들기 **[!UICONTROL 새 프로젝트 만들기]** > **[!UICONTROL 템플릿]**&#x200B;에서 프로젝트를 클릭합니다. 반딧불이를 선택합니다. 두 개의 작업 영역이 있는 새 Firefox 프로젝트를 만듭니다.`Production` 및 `Stage`. 필요한 경우 `Development`과 같은 추가 작업 영역을 추가합니다.
 

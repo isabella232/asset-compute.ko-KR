@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service] 소개.'
 description: '[!DNL Asset Compute Service] 은 복잡성을 줄이고 확장성을 개선하는 클라우드 기반의 자산 처리 서비스입니다.'
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->현재 [!DNL Asset Compute Service]은 [!DNL Experience Manager]를 통해서만 Cloud Service으로 사용할 수 있습니다. 관리자는 처리를 위해 자산을 전달할 [!DNL Asset Compute Service]을(를) 호출할 수 있는 처리 프로필을 만듭니다. [자산 마이크로서비스 및 처리 프로필 사용](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)을 참조하십시오.
+>현재 [!DNL Asset Compute Service]은 [!DNL Experience Manager]을(를) 통해서만 [!DNL Cloud Service]로 사용할 수 있습니다. 관리자는 처리를 위해 자산을 전달할 [!DNL Asset Compute Service]을(를) 호출할 수 있는 처리 프로필을 만듭니다. [자산 마이크로서비스 및 처리 프로필 사용](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)을 참조하십시오.
 
 ## 지원되는 [!DNL Asset Compute Service] {#possible-use-cases-benefits} 사용 사례
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager에서 Cloud Service으로 자산 마이크로 서비스를 사용한 자산 처리 개요](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [자산 마이크로 서비스를 통한 자산 처리 개요  [!DNL Adobe Experience Manager] a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) 설명서
 >* [파일 형식을 사용하여 처리할 수 있습니다](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 >* [asset compute 서비스의 릴리스 노트](release-notes.md)

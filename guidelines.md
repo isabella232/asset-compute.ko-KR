@@ -1,8 +1,8 @@
 ---
-source-git-commit: 0a0feacbcd6456e01a6d451f9954ab21c1a8bce3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
@@ -30,15 +30,15 @@ Adobe는 설명서에 대한 헌금을 환영하는 동안, 끌어오기 요청�
 
 ### 고객 질문에 대한 답변은 설명서 기여도
 
-문서를 개선하기 위해 필요한 모든 아이디어는 증여를 환영합니다. 그러나 댓글, 문제 및 풀 요청은 *기여도만을 위한* 것입니다. 제품 사용 방법, 프로젝트 구현 또는 기술 문제 해결 방법에 대한 귀하의 질문에 답변하기 위해 사용된 것이 아닙니다.
+문서를 개선하기 위해 필요한 모든 아이디어는 증여를 환영합니다. 그러나 댓글, 문제 및 풀 요청은 *기여도*&#x200B;에만 사용됩니다. 제품 사용 방법, 프로젝트 구현 또는 기술 문제 해결 방법에 대한 귀하의 질문에 답변하기 위해 사용된 것이 아닙니다.
 
-사용 또는 기술 오류에 대한 모든 질문은 [Experience Cloud 엔터프라이즈 지원 포털을](https://helpx.adobe.com/kr/contact/enterprise-support.ec.html) 통해 일반적인 지원 프로세스를 통해 보고하거나 [Experience Manager 커뮤니티에서](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)논의해야 합니다.
+사용 또는 기술 오류에 대한 모든 질문은 [[!DNL Experience Cloud] 엔터프라이즈 지원 포털](https://helpx.adobe.com/kr/contact/enterprise-support.ec.html)을 통해 일반적인 지원 프로세스를 통해 보고하거나 [[!DNL Experience Manager] community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)에서 논의해야 합니다.
 
 설명서 기여도는 Adobe 고객 지원***을 대체할 수 없으며 지원 관련 질문에 대한 답변을 구하는 이러한 기여도가 거부됩니다.
 
 ### 기여도는 해당 문서 페이지를 명확하게 참조해야 합니다.
 
-설명서에 대한 개선 사항을 제안하는 문제를 만드는 경우 영향을 받는 페이지에 대한 링크를 포함해야 합니다. 문서 페이지에서 이 페이지 **편집** 링크를 사용하여 문제를 만들면 페이지에 대한 링크가 자동으로 발행됩니다.
+설명서에 대한 개선 사항을 제안하는 문제를 만드는 경우 영향을 받는 페이지에 대한 링크를 포함해야 합니다. 문서 페이지에서 **이 페이지 편집** 링크를 사용하여 문제를 만들면 페이지에 대한 링크가 자동으로 생성됩니다.
 
 이는 원래 끌어오기 요청이 영향을 받는 페이지를 참조하므로 끌어오기 요청에 적용되지 않습니다.
 
@@ -60,7 +60,7 @@ Adobe 설명서에 대한 모든 공헌 사항은 특정 스타일 지침을 따
 
 #### Microsoft Manual of Style 따라하기
 
-[Microsoft Manual of Style](https://docs.microsoft.com/en-us/style-guide/welcome/) 은 소프트웨어 문서에 중점을 둔 설명서 스타일 가이드로 무료로 제공됩니다.
+[Microsoft Manual of ](https://docs.microsoft.com/en-us/style-guide/welcome/) Stylees는 소프트웨어 문서에 중점을 둔 사용 가능한 설명서 스타일 가이드입니다.
 
 ### 형식 지정
 

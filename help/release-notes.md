@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]의 릴리스 노트입니다.'
 description: ' [!DNL Asset Compute Service]의 새로운 기능, 개선 사항 및 알려진 문제'
 translation-type: tm+mt
-source-git-commit: 68d910cd092fccb599c361f24daff80460129e1c
+source-git-commit: c57867cd896e4ccb9402e6eeb0eea133faaa0e5d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ To test your custom applications with the [developer tool](https://github.com/ad
 
 이 버전은 [!DNL Asset Compute Service]의 첫 번째 릴리스입니다. 디지털 에셋을 처리하기 위해 [!DNL Adobe Experience Cloud]의 확장 가능한 서비스입니다. 이미지, 비디오, 문서 및 기타 파일 형식을 축소판, 추출한 텍스트 및 메타데이터, 보관 파일 등 다양한 표현물로 변환할 수 있습니다.
 
-현재 [!DNL Asset Compute Service]은 [!DNL Experience Manager]에서만 Cloud Service으로 사용할 수 있습니다.
+현재 [!DNL Asset Compute Service]은 [!DNL Experience Manager]에서만 [!DNL Cloud Service]로 사용할 수 있습니다.
 
 ## 제한 및 알려진 문제 {#known-limitations}
 

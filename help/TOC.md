@@ -14,10 +14,10 @@ getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-
 tutorials-title: AEM 자습서
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '120'
+ht-degree: 13%
 
 ---
 
@@ -37,6 +37,6 @@ ht-degree: 0%
    + [맞춤형 애플리케이션 개발](develop-custom-application.md)
    + [사용자 정의 응용 프로그램 테스트](test-custom-application.md)
    + [사용자 정의 응용 프로그램 배포](deploy-custom-application.md)
-   + [Cloud Service으로 Experience Manager 통합 및 사용](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
+   + [Inas 통합 및  [!DNL Experience Manager] 사용 [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
 + [문제 해결](troubleshooting.md)
 + [오픈 소스 프로젝트에 기여하기](contribute-to-compute-service.md)

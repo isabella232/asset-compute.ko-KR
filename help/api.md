@@ -2,21 +2,21 @@
 title: '[!DNL Asset Compute Service] HTTP API.'
 description: '[!DNL Asset Compute Service] 사용자 정의 애플리케이션을 만드는 HTTP API'
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2921'
+ht-degree: 2%
 
 ---
 
 
 # [!DNL Asset Compute Service] HTTP API {#asset-compute-http-api}
 
-API의 사용은 개발 용도로 제한됩니다. API는 사용자 지정 애플리케이션을 개발할 때 컨텍스트로 제공됩니다. [!DNL Adobe Experience Manager] as a Cloud Service은 API를 사용하여 처리 정보를 사용자 지정 애플리케이션에 전달합니다. 자세한 내용은 [자산 마이크로서비스 및 처리 프로필 사용](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)을 참조하십시오.
+API의 사용은 개발 용도로 제한됩니다. API는 사용자 지정 애플리케이션을 개발할 때 컨텍스트로 제공됩니다. [!DNL Adobe Experience Manager] as a  [!DNL Cloud Service] uses the API to pass the processing information to a custom application. 자세한 내용은 [자산 마이크로서비스 및 처리 프로필 사용](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)을 참조하십시오.
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] 는 Cloud Service [!DNL Experience Manager] 로 사용할 수만 있습니다.
+>[!DNL Asset Compute Service] 은 a와 함께 사용할  [!DNL Experience Manager] 때만 사용할 수  [!DNL Cloud Service]있습니다.
 
 [!DNL Asset Compute Service] HTTP API의 모든 클라이언트는 다음 고급 흐름을 따라야 합니다.
 

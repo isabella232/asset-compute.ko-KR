@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]에 대한 개발을 참조하십시오.'
 description: ' [!DNL Asset Compute Service]을(를) 사용하여 사용자 정의 응용 프로그램을 만듭니다.'
 translation-type: tm+mt
-source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 
 >[!NOTE]
 >
->이는 Cloud Service으로 [!DNL Adobe Experience Manager]의 클라우드 저장소와 별개입니다. asset compute 개발자 도구를 사용한 개발 및 테스트에만 적용됩니다.
+>이것은 [!DNL Adobe Experience Manager]의 클라우드 저장소와 [!DNL Cloud Service]로 구분됩니다. asset compute 개발자 도구를 사용한 개발 및 테스트에만 적용됩니다.
 
 [지원되는 클라우드 스토리지 컨테이너](https://github.com/adobe/asset-compute-devtool#prerequisites)에 액세스할 수 있는지 확인하십시오. 필요에 따라 여러 프로젝트에서 여러 개발자가 이 컨테이너를 공유할 수 있습니다.
 

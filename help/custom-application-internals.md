@@ -1,10 +1,10 @@
 ---
-title: 사용자 정의 애플리케이션의 작동 방식을 파악합니다.
-description: '사용자 지정 응용 프로그램의 작동 방식을 이해하는 데 도움이 되는 내부 작업 [!DNL Asset Compute Service] '
+title: 사용자 정의 애플리케이션의 작업 내용을 파악합니다.
+description: 사용자 정의 응용 프로그램의 작동 방식을 이해하는 데 도움이 되도록  [!DNL Asset Compute Service] 사용자 정의 응용 프로그램의 내부 작업.
 translation-type: tm+mt
 source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 사용자 지정 응용 프로그램 {#how-custom-application-works} 내부
 
-다음 그림을 사용하여 클라이언트가 사용자 정의 응용 프로그램을 사용하여 디지털 자산을 처리할 때 엔드 투 엔드 워크플로우를 파악합니다.
+클라이언트의 사용자 정의 응용 프로그램을 사용하여 디지털 에셋을 처리할 때 엔드 투 엔드 워크플로우를 이해하려면 다음 그림을 사용합니다.
 
 ![맞춤형 애플리케이션 워크플로우](assets/customworker.png)
 
-*그림:자산을 사용하는 데 관련된 절차 [!DNL Asset Compute Service].*
+*그림:자산을 사용하여 처리하는 절차 [!DNL Asset Compute Service].*
 
 ## 등록 {#registration}
 
@@ -47,11 +47,11 @@ curl -X POST \
   -d "<RENDITION_JSON>
 ```
 
-클라이언트는 미리 서명된 URL을 사용하여 표현물의 서식을 올바르게 지정할 책임이 있습니다. NodeJS 응용 프로그램에서 [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) JavaScript 라이브러리를 사용하여 URL을 미리 서명할 수 있습니다. 현재 라이브러리는 Azure Blob 저장소 및 AWS S3 컨테이너만 지원합니다.
+클라이언트는 사전 서명된 URL을 사용하여 변환을 올바르게 서식을 지정할 책임이 있습니다. NodeJS 응용 프로그램에서 [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) JavaScript 라이브러리를 사용하여 URL을 미리 서명할 수 있습니다. 현재 라이브러리는 Azure Blob 저장소 및 AWS S3 컨테이너만 지원합니다.
 
 처리 요청은 Adobe I/O 이벤트를 폴링하는 데 사용할 수 있는 `requestId`을 반환합니다.
 
-샘플 사용자 지정 응용 프로그램 처리 요청은 아래에 나와 있습니다.
+샘플 사용자 지정 응용 프로그램 처리 요청은 아래에 있습니다.
 
 ```json
 {
@@ -69,15 +69,15 @@ curl -X POST \
 }
 ```
 
-[!DNL Asset Compute Service]은 사용자 지정 응용 프로그램에 사용자 지정 응용 프로그램 변환 요청을 보냅니다. 제공된 응용 프로그램 URL에 HTTP POST을 사용합니다. 이 URL은 Project Firefly의 보안 웹 작업 URL입니다. 모든 요청은 데이터 보안을 최대화하기 위해 HTTPS 프로토콜을 사용합니다.
+[!DNL Asset Compute Service]은 사용자 지정 응용 프로그램 변환 요청을 사용자 지정 응용 프로그램으로 보냅니다. HTTP POST을 사용하여 Project Firefly의 보안 웹 작업 URL인 제공된 응용 프로그램 URL을 사용합니다. 모든 요청은 데이터 보안을 최대화하기 위해 HTTPS 프로토콜을 사용합니다.
 
-사용자 지정 응용 프로그램에서 사용하는 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)는 HTTP POST 요청을 처리합니다. 또한 소스 다운로드, 변환 업로드, I/O 이벤트 전송 및 오류 처리를 처리합니다.
+사용자 정의 응용 프로그램에서 사용하는 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)는 HTTP POST 요청을 처리합니다. 또한 소스 다운로드, 변환 업로드, I/O 이벤트 전송 및 오류 처리를 처리합니다.
 
 <!-- TBD: Add the application diagram. -->
 
 ### 응용 프로그램 코드 {#application-code}
 
-사용자 지정 코드는 로컬로 사용 가능한 소스 파일(`source.path`)을 가져오는 콜백만 제공해야 합니다. `rendition.path`은 자산 처리 요청의 최종 결과를 배치할 위치입니다. 사용자 지정 응용 프로그램은 콜백을 사용하여 로컬로 사용 가능한 소스 파일을 변환한 파일(`rendition.path`)에 전달된 이름을 사용합니다. 사용자 지정 응용 프로그램이 변환을 만들려면 `rendition.path`에 작성해야 합니다.
+사용자 지정 코드는 로컬로 사용 가능한 소스 파일(`source.path`)을 가져오는 콜백만 제공해야 합니다. `rendition.path`은 자산 처리 요청의 최종 결과를 배치할 위치입니다. 사용자 지정 응용 프로그램은 콜백을 사용하여 로컬로 사용할 수 있는 소스 파일을 변환한 파일(`rendition.path`)에 전달된 이름을 사용합니다. 사용자 정의 응용 프로그램은 변환을 만들려면 `rendition.path`에 작성해야 합니다.
 
 ```javascript
 const { worker } = require('@adobe/asset-compute-sdk');
@@ -97,33 +97,33 @@ exports.main = worker(async (source, rendition) => {
 
 ### 소스 파일 다운로드 {#download-source}
 
-사용자 지정 응용 프로그램은 로컬 파일만 취급합니다. 소스 파일 다운로드는 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)에 의해 처리됩니다.
+사용자 정의 응용 프로그램은 로컬 파일만 처리합니다. 소스 파일 다운로드는 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)에 의해 처리됩니다.
 
 ### 변환 만들기 {#rendition-creation}
 
-SDK는 각 변환에 대해 비동기 [변환 콜백 함수](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required)을(를) 호출합니다.
+SDK는 각 변환에 대해 비동기 [변환 콜백 함수](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required)를 호출합니다.
 
-콜백 함수에는 [source](https://github.com/adobe/asset-compute-sdk#source) 및 [rendition](https://github.com/adobe/asset-compute-sdk#rendition) 개체에 대한 액세스 권한이 있습니다. `source.path`은(는) 이미 존재하며 소스 파일의 로컬 복사본 경로입니다. `rendition.path`은 처리된 표현물을 저장해야 하는 경로입니다. [disableSourceDownload 플래그](https://github.com/adobe/asset-compute-sdk#worker-options-optional)가 설정되어 있지 않으면 응용 프로그램은 `rendition.path`를 정확하게 사용해야 합니다. 그렇지 않으면 SDK에서 변환 파일을 찾거나 식별할 수 없으며 오류가 발생합니다.
+콜백 함수에는 [source](https://github.com/adobe/asset-compute-sdk#source) 및 [rendition](https://github.com/adobe/asset-compute-sdk#rendition) 개체에 대한 액세스 권한이 있습니다. `source.path`은(는) 이미 존재하며 소스 파일의 로컬 복사본 경로입니다. `rendition.path`은 처리된 변환을 저장해야 하는 경로입니다. [disableSourceDownload 플래그](https://github.com/adobe/asset-compute-sdk#worker-options-optional)이(가) 설정되어 있지 않으면 응용 프로그램은 `rendition.path`를 정확하게 사용해야 합니다. 그렇지 않으면 SDK에서 변환 파일을 찾거나 식별할 수 없으며 오류가 발생합니다.
 
-그 예제의 지나치게 단순화는 사용자 정의 응용 프로그램의 구조에 대해 설명하고 집중하기 위해 행해진다. 이 응용 프로그램은 소스 파일을 변환 대상에 복사하기만 하면 됩니다.
+예제의 지나치게 간소화된 작업은 사용자 정의 응용 프로그램의 구조에 대해 설명하고 집중하기 위해 수행됩니다. 이 응용 프로그램은 소스 파일을 변환 대상에 복사합니다.
 
-변환 콜백 매개 변수에 대한 자세한 내용은 [Asset compute SDK API](https://github.com/adobe/asset-compute-sdk#api-details)를 참조하십시오.
+변환 콜백 매개 변수에 대한 자세한 내용은 [Asset compute SDK API](https://github.com/adobe/asset-compute-sdk#api-details)을(를) 참조하십시오.
 
 ### 변환 업로드 {#upload-rendition}
 
-각 변환이 만들어 `rendition.path`에서 제공하는 경로를 가진 파일에 저장되면, [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)는 각 변환을 클라우드 스토리지(AWS 또는 Azure)에 업로드합니다. 사용자 지정 응용 프로그램은 동일한 응용 프로그램 URL을 가리키는 여러 표현물을 동시에 가져옵니다. 단, 들어오는 요청에 동일한 응용 프로그램 URL을 가리키는 여러 표현물이 있을 경우에만. 클라우드 스토리지에 업로드는 각 변환 후에 수행되고 다음 변환에 대한 콜백을 실행하기 전에 수행됩니다.
+각 변환이 생성 및 `rendition.path`에서 제공하는 경로의 파일에 저장되면 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)는 각 변환을 클라우드 스토리지(AWS 또는 Azure)에 업로드합니다. 사용자 지정 응용 프로그램은 동일한 응용 프로그램 URL을 가리키는 여러 표현물이 들어오는 경우에만 동시에 여러 변환을 가져옵니다. 클라우드 스토리지에 업로드하는 작업은 각 변환 다음에 다음에 대한 콜백을 실행하기 전에 수행됩니다.
 
-`batchWorker()`은 모든 표현물을 실제로 처리하며 모든 표현물이 처리된 후에만 이러한 표현물을 업로드하므로 다른 비헤이비어가 있습니다.
+`batchWorker()`은(는) 실제로 모든 변환을 처리하며 모든 변환이 처리된 후에만 이러한 변환을 업로드하므로 다른 비헤이비어가 있습니다.
 
 ## Adobe I/O 이벤트 {#aio-events}
 
-SDK는 각 변환에 대해 Adobe I/O 이벤트를 전송합니다. 이러한 이벤트는 결과에 따라 `rendition_created` 또는 `rendition_failed` 형식입니다. 이벤트에 대한 자세한 내용은 [Asset compute 비동기 이벤트](api.md#asynchronous-events)를 참조하십시오.
+SDK는 각 변환에 대해 Adobe I/O 이벤트를 전송합니다. 이러한 이벤트는 결과에 따라 `rendition_created` 또는 `rendition_failed` 유형입니다. 이벤트에 대한 자세한 내용은 [비동기 이벤트 Asset compute](api.md#asynchronous-events)을 참조하십시오.
 
 ## Adobe I/O 이벤트 수신 {#receive-aio-events}
 
-클라이언트는 소비 논리에 따라 [Adobe I/O 이벤트 저널](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling)을 폴링합니다. 초기 저널 URL은 `/register` API 응답에서 제공되는 URL입니다. 이벤트에 있는 `requestId`을 사용하여 이벤트를 식별할 수 있으며 `/process`에서 반환되는 이벤트와 동일합니다. 모든 변환에는 변환이 업로드되거나 실패하자마자 전송되는 별도의 이벤트가 있습니다. 일치하는 이벤트를 수신하면 클라이언트가 결과 변환을 표시하거나 처리할 수 있습니다.
+클라이언트는 소비 논리에 따라 [Adobe I/O 이벤트 저널](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling)을 폴링합니다. 초기 저널 URL은 `/register` API 응답에 제공된 URL입니다. 이벤트에 있는 `requestId`을 사용하여 이벤트를 식별할 수 있으며 `/process`에서 반환되는 것과 같습니다. 모든 변환에는 변환이 업로드되거나 실패하자마자 전송되는 별도의 이벤트가 있습니다. 일치하는 이벤트를 수신하면 클라이언트는 이를 표시하거나 다른 방법으로 결과 변환을 처리할 수 있습니다.
 
-JavaScript 라이브러리 [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage)에서는 `waitActivation()` 메서드를 사용하여 저널 투표를 간단하게 폴링하여 모든 이벤트를 가져옵니다.
+JavaScript 라이브러리 [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage)에서는 `waitActivation()` 메서드를 사용하여 저널 폴링을 단순하게 수행하여 모든 이벤트를 가져옵니다.
 
 ```javascript
 const events = await assetCompute.waitActivation(requestId);

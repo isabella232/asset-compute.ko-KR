@@ -4,9 +4,9 @@ product: Asset Compute Service
 solution: Experience Manager
 type: Documentation
 audience: end-user
-user-guide-title: asset compute 서비스 가이드
-user-guide-description: '이 설명서에서는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 작업을 다룹니다. [!DNL Asset Compute Service] '
-breadcrumb-title: asset compute 서비스 가이드
+user-guide-title: asset compute 서비스 안내서
+user-guide-description: 이 설명서는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 작업 [!DNL Asset Compute Service] 에 대해 설명합니다.
+breadcrumb-title: asset compute 서비스 안내서
 breadcrumb-url: /docs/asset-compute/using/home.html
 solution-title: AEM Assets
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html
@@ -37,6 +37,6 @@ ht-degree: 13%
    + [맞춤형 애플리케이션 개발](develop-custom-application.md)
    + [사용자 정의 응용 프로그램 테스트](test-custom-application.md)
    + [사용자 정의 응용 프로그램 배포](deploy-custom-application.md)
-   + [Inas 통합 및  [!DNL Experience Manager] 사용 [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
+   + [통합 및 사용 [!DNL Experience Manager] 을 통해 [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
 + [문제 해결](troubleshooting.md)
-+ [오픈 소스 프로젝트에 기여하기](contribute-to-compute-service.md)
++ [오픈 소스 프로젝트에 대한 Contribute](contribute-to-compute-service.md)

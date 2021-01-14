@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]에 대한 현상.'
 description: ' [!DNL Asset Compute Service]을(를) 사용하여 사용자 정의 응용 프로그램을 만듭니다.'
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: 576936cc7527fc4cb43c0859a61df5fecc0bc3a8
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
    create console.json
    ```
 
-1. `Which Adobe I/O App features do you want to enable for this project?` 메시지가 표시되면 `Actions` 이상을 선택합니다.
+1. `Which Adobe I/O App features do you want to enable for this project?` 메시지가 표시되면 `Actions`을 선택합니다. 웹 에셋은 다른 인증 및 인증 검사를 사용하기 때문에 `Web Assets` 옵션을 선택 취소해야 합니다.
 
    ```bash
    ? Which Adobe I/O App features do you want to enable for this project?
@@ -231,7 +231,7 @@ const orgId = params.auth.orgId; // Experience Cloud Organization
 
 ### 타사 시스템 {#pass-credentials-for-tp}에 대한 자격 증명 전달
 
-다른 외부 서비스에 대한 자격 증명을 처리하려면 작업에 기본 매개 변수로 전달합니다. 이러한 항목은 전송 중에 자동으로 암호화됩니다. 자세한 내용은 런타임 개발자 안내서[에서 액션 만들기를 참조하십시오. ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/creating_actions.md) 그런 다음 배포하는 동안 환경 변수를 사용하여 설정합니다. 이러한 매개 변수는 작업 내의 `params` 개체에서 액세스할 수 있습니다.
+다른 외부 서비스에 대한 자격 증명을 처리하려면 작업에 기본 매개 변수로 전달합니다. 이러한 항목은 전송 중에 자동으로 암호화됩니다. 자세한 내용은 런타임 개발자 안내서](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/creating_actions.md)에서 액션 만들기를 참조하십시오. [ 그런 다음 배포하는 동안 환경 변수를 사용하여 설정합니다. 이러한 매개 변수는 작업 내의 `params` 개체에서 액세스할 수 있습니다.
 
 `manifest.yml`의 `inputs` 내에 기본 매개 변수를 설정합니다.
 

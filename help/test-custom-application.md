@@ -2,9 +2,9 @@
 title: '사용자 지정 응용 프로그램을 테스트하고 디버깅합니다. [!DNL Asset Compute Service] '
 description: '사용자 지정 응용 프로그램을 테스트하고 디버깅합니다. [!DNL Asset Compute Service] '
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ asset compute 애플리케이션 단위 테스트 프레임워크를 사용하�
 
 ### 테스트 추가 {#add-tests}
 
-테스트는 AIO 프로젝트의 루트 수준에 있는 `test` 폴더 내에 있어야 합니다. 각 응용 프로그램에 대한 테스트 케이스는 각 테스트 케이스에 대해 하나의 폴더가 있는 `test/asset-compute/<worker-name>` 경로에 있어야 합니다.
+테스트는 [!DNL Adobe I/O] 프로젝트의 루트 수준에 있는 `test` 폴더 내에 있어야 합니다. 각 응용 프로그램에 대한 테스트 케이스는 각 테스트 케이스에 대해 하나의 폴더가 있는 `test/asset-compute/<worker-name>` 경로에 있어야 합니다.
 
 ```yaml
 action/

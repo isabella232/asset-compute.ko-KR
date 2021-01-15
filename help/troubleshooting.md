@@ -2,9 +2,9 @@
 title: 문제 해결 [!DNL Asset Compute Service].
 description: ' [!DNL Asset Compute Service]을(를) 사용하여 사용자 지정 응용 프로그램의 문제를 해결하고 디버깅합니다.'
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '288'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ asset compute 서비스 문제를 해결하는 데 도움이 될 수 있는 몇 
 * 실패 시 정리 시 발생할 수 있는 모든 오류가 원래 문제를 숨기는 고유한 오류를 생성하지 않는지 확인합니다.
 
 * 새 [!DNL Asset Compute Service] 통합을 사용하여 처음 개발자 도구를 시작할 때 Asset compute 이벤트 저널이 완전히 설정되지 않았을 수 있으므로 첫 번째 처리 요청이 실패할 수 있습니다. 다른 요청을 보내기 전에 분기가 설정될 때까지 잠시 기다립니다.
-* asset compute `/register` 또는 `/process` 요청을 전송하는 도중 오류가 발생하는 경우 필요한 모든 API가 [!DNL Adobe I/O] 프로젝트 및 작업 공간(Asset compute, IO 이벤트, IO 이벤트 관리 및 런타임)에 추가되어 있는지 확인합니다.
+* asset compute `/register` 또는 `/process` 요청을 전송하는 도중 오류가 발생하는 경우 필요한 모든 API가 [!DNL Adobe I/O] 프로젝트 및 작업 공간(Asset compute, [!DNL Adobe I/O] 이벤트, [!DNL Adobe I/O] 이벤트 관리 및 [!DNL Adobe I/O] 런타임)에 추가되어 있는지 확인합니다.
 
 ## [!DNL Adobe I/O] CLI {#login-via-aio-cli}를 통해 로그인 문제
 

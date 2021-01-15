@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]에 대한 현상.'
 description: ' [!DNL Asset Compute Service]을(를) 사용하여 사용자 정의 응용 프로그램을 만듭니다.'
 translation-type: tm+mt
-source-git-commit: 576936cc7527fc4cb43c0859a61df5fecc0bc3a8
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 사용자 정의 응용 프로그램 {#create-custom-application} 만들기
 
-[Adobe I/O CLI](https://github.com/adobe/aio-cli)를 로컬로 설치하도록 하십시오.
+[[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli)를 로컬로 설치하도록 하십시오.
 
 1. 사용자 지정 응용 프로그램을 만들려면 [Firefox 응용 프로그램](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli)을 만듭니다. 이렇게 하려면 터미널에서 `aio app init <app-name>`을(를) 실행하십시오.
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
    ```sh
    $ aio app init <app-name>
-   Retrieving information from Adobe I/O Console..
+   Retrieving information from [!DNL Adobe I/O] Console.
    ? Select Org My Adobe Org
    ? Select Project MyFireflyProject
    ? Select Workspace myworkspace
@@ -121,7 +121,7 @@ Firefly 프로젝트 루트의 ENV 파일에 개발자 도구에 대한 다음 �
 
 asset compute 개발자 도구를 사용하여 응용 프로그램을 실행하기 전에 [자격 증명](#developer-tool-credentials)을 올바르게 구성합니다.
 
-개발자 도구에서 응용 프로그램을 실행하려면 `aio app run` 명령을 사용합니다. 동작을 Adobe I/O Runtime에 배포하고 로컬 시스템에서 개발 도구를 시작합니다. 이 도구는 개발 중에 응용 프로그램 요청을 테스트하는 데 사용됩니다. 다음은 변환 요청의 예입니다.
+개발자 도구에서 응용 프로그램을 실행하려면 `aio app run` 명령을 사용합니다. 동작을 [!DNL Adobe I/O] Runtime에 배포하고 로컬 컴퓨터에서 개발 도구를 시작합니다. 이 도구는 개발 중에 응용 프로그램 요청을 테스트하는 데 사용됩니다. 다음은 변환 요청의 예입니다.
 
 ```json
 "renditions": [
@@ -266,7 +266,7 @@ const key = params.secretKey;
 
 ## 애플리케이션 크기 조정 {#sizing-workers}
 
-응용 프로그램은 `manifest.yml`를 통해 구성할 수 있는 [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)과 함께 Adobe I/O Runtime의 컨테이너에서 실행됩니다.
+응용 프로그램은 `manifest.yml`을(를) 통해 구성할 수 있는 [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)와 함께 [!DNL Adobe I/O] Runtime의 컨테이너에서 실행됩니다.
 
 ```yaml
     actions:

@@ -2,7 +2,7 @@
 title: '[!DNL Asset Compute Service] HTTP API.'
 description: '[!DNL Asset Compute Service] HTTP API를 사용하여 사용자 정의 응용 프로그램을 만듭니다.'
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 2%
@@ -38,7 +38,7 @@ API의 사용은 개발 목적으로 제한됩니다. API는 사용자 지정 �
 
 1. `Authorization` 헤더(기술 계정 토큰인 베어러 토큰)가 Adobe 개발자 콘솔 프로젝트에서  [JWT ](https://www.adobe.io/authentication/auth-methods.html) 교환을 통해 전송됩니다. [범위](#scopes)는 아래에 문서화되어 있습니다.
 
-<!-- TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in AIO's GitHub repo to get a new URL.
+<!-- TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in Adobe I/O's GitHub repo to get a new URL.
 -->
 
 1. `x-gw-ims-org-id` 헤더를 추가합니다.

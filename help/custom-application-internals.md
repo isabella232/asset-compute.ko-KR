@@ -2,9 +2,9 @@
 title: 사용자 정의 애플리케이션의 작업 내용을 파악합니다.
 description: 사용자 정의 응용 프로그램의 작동 방식을 이해하는 데 도움이 되도록  [!DNL Asset Compute Service] 사용자 정의 응용 프로그램의 내부 작업.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 등록 {#registration}
 
-Adobe Asset compute에 대한 Adobe I/O 이벤트 수신에 대한 저널 URL을 설정하고 검색하려면 클라이언트가 [`/process`](api.md#process-request)에 대한 첫 번째 요청 전에 [`/register`](api.md#register)을(를) 한 번 호출해야 합니다.
+Adobe Asset compute에 대한 [!DNL Adobe I/O] 이벤트를 받기 위한 저널 URL을 설정하고 검색하려면 클라이언트가 [`/process`](api.md#process-request)에 대한 첫 번째 요청 전에 [`/register`](api.md#register)을(를) 한 번 호출해야 합니다.
 
 ```sh
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
 
 클라이언트는 사전 서명된 URL을 사용하여 변환을 올바르게 서식을 지정할 책임이 있습니다. NodeJS 응용 프로그램에서 [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) JavaScript 라이브러리를 사용하여 URL을 미리 서명할 수 있습니다. 현재 라이브러리는 Azure Blob 저장소 및 AWS S3 컨테이너만 지원합니다.
 
-처리 요청은 Adobe I/O 이벤트를 폴링하는 데 사용할 수 있는 `requestId`을 반환합니다.
+처리 요청은 [!DNL Adobe I/O] 이벤트를 폴링하는 데 사용할 수 있는 `requestId`을 반환합니다.
 
 샘플 사용자 지정 응용 프로그램 처리 요청은 아래에 있습니다.
 
@@ -71,7 +71,7 @@ curl -X POST \
 
 [!DNL Asset Compute Service]은 사용자 지정 응용 프로그램 변환 요청을 사용자 지정 응용 프로그램으로 보냅니다. HTTP POST을 사용하여 Project Firefly의 보안 웹 작업 URL인 제공된 응용 프로그램 URL을 사용합니다. 모든 요청은 데이터 보안을 최대화하기 위해 HTTPS 프로토콜을 사용합니다.
 
-사용자 정의 응용 프로그램에서 사용하는 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)는 HTTP POST 요청을 처리합니다. 또한 소스 다운로드, 변환 업로드, I/O 이벤트 전송 및 오류 처리를 처리합니다.
+사용자 정의 응용 프로그램에서 사용하는 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)는 HTTP POST 요청을 처리합니다. 또한 소스 다운로드, 변환 업로드, [!DNL Adobe I/O] 이벤트 전송 및 오류 처리를 처리합니다.
 
 <!-- TBD: Add the application diagram. -->
 
@@ -115,13 +115,13 @@ SDK는 각 변환에 대해 비동기 [변환 콜백 함수](https://github.com/
 
 `batchWorker()`은(는) 실제로 모든 변환을 처리하며 모든 변환이 처리된 후에만 이러한 변환을 업로드하므로 다른 비헤이비어가 있습니다.
 
-## Adobe I/O 이벤트 {#aio-events}
+## [!DNL Adobe I/O] 이벤트 {#aio-events}
 
-SDK는 각 변환에 대해 Adobe I/O 이벤트를 전송합니다. 이러한 이벤트는 결과에 따라 `rendition_created` 또는 `rendition_failed` 유형입니다. 이벤트에 대한 자세한 내용은 [비동기 이벤트 Asset compute](api.md#asynchronous-events)을 참조하십시오.
+SDK는 각 변환에 대해 [!DNL Adobe I/O] 이벤트를 전송합니다. 이러한 이벤트는 결과에 따라 `rendition_created` 또는 `rendition_failed` 유형입니다. 이벤트에 대한 자세한 내용은 [비동기 이벤트 Asset compute](api.md#asynchronous-events)을 참조하십시오.
 
-## Adobe I/O 이벤트 수신 {#receive-aio-events}
+## [!DNL Adobe I/O] 이벤트 {#receive-aio-events} 수신
 
-클라이언트는 소비 논리에 따라 [Adobe I/O 이벤트 저널](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling)을 폴링합니다. 초기 저널 URL은 `/register` API 응답에 제공된 URL입니다. 이벤트에 있는 `requestId`을 사용하여 이벤트를 식별할 수 있으며 `/process`에서 반환되는 것과 같습니다. 모든 변환에는 변환이 업로드되거나 실패하자마자 전송되는 별도의 이벤트가 있습니다. 일치하는 이벤트를 수신하면 클라이언트는 이를 표시하거나 다른 방법으로 결과 변환을 처리할 수 있습니다.
+클라이언트는 소비 논리에 따라 [[!DNL Adobe I/O] 이벤트 저널](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling)을 폴링합니다. 초기 저널 URL은 `/register` API 응답에 제공된 URL입니다. 이벤트에 있는 `requestId`을 사용하여 이벤트를 식별할 수 있으며 `/process`에서 반환되는 것과 같습니다. 모든 변환에는 변환이 업로드되거나 실패하자마자 전송되는 별도의 이벤트가 있습니다. 일치하는 이벤트를 수신하면 클라이언트는 이를 표시하거나 다른 방법으로 결과 변환을 처리할 수 있습니다.
 
 JavaScript 라이브러리 [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage)에서는 `waitActivation()` 메서드를 사용하여 저널 폴링을 단순하게 수행하여 모든 이벤트를 가져옵니다.
 
@@ -141,7 +141,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-저널 이벤트를 가져오는 방법에 대한 자세한 내용은 [Adobe I/O 이벤트 API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml)를 참조하십시오.
+저널 이벤트를 가져오는 방법에 대한 자세한 내용은 [[!DNL Adobe I/O] 이벤트 API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml)를 참조하십시오.
 
 <!-- TBD:
 * Illustration of the controls/data flow.

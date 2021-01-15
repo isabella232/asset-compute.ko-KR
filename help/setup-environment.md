@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]에 필요한 개발 환경을 설정합니다.'
 description: '사용자 지정 코드 만들기 및 테스트를 시작하기 위한 개발자 환경 설정 [!DNL Asset Compute Service] '
 translation-type: tm+mt
-source-git-commit: 0ecf2c044c7847029fb10ce37f4b831c58b93fe9
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
    * [Docker Desktop](https://www.docker.com/get-started).
    * [NodeJS](https://nodejs.org) (v10~v12 LTS, 홀수 버전은 권장되지 않음) 및  [NPM](https://www.npmjs.com). OSX HomeBrew 사용자는 `brew install node`을(를) 사용하여 두 가지를 모두 설치할 수 있습니다. 그렇지 않은 경우 [NodeJS 다운로드 페이지](https://nodejs.org/en/)에서 다운로드합니다.
    * NodeJS에 적합한 IDE는 디버거에 대해 지원되는 IDE이므로 [Visual Studio 코드(VS 코드)](https://code.visualstudio.com)를 권장합니다. 다른 IDE를 코드 편집기로 사용할 수 있지만 고급 사용(예: 디버거)은 아직 지원되지 않습니다.
-   * [AIO CLI](https://github.com/adobe/aio-cli) (`aio`) - 를 사용하여  `npm install -g @adobe/aio-cli`설치합니다.
+   * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - 를 사용하여  `npm install -g @adobe/aio-cli`설치합니다.
 
 1. [사전 요구 사항](/help/understand-extensibility.md#prerequisites-and-provisioning)을 충족해야 합니다.
 

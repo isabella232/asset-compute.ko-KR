@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]의 오픈 소스 구성 요소에 기여합니다.'
 description: ' [!DNL Asset Compute Service]의 오픈 소스 구성 요소에 기여합니다.'
 translation-type: tm+mt
-source-git-commit: 127895cf1bab59546f9ba0be2b3b7a935627effb
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 0%
 
 ## 사용 가능한 리소스 및 라이브러리 {#available-resources}
 
-[!DNL Asset Compute Service]에 대한 [오픈 소스 라이브러리](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries)의 목록을 참조하십시오. 또한 사용 가능한 Adobe I/O Runtime 및 OpenWhisk 리소스는 다음과 같습니다.
+[!DNL Asset Compute Service]에 대한 [오픈 소스 라이브러리](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries)의 목록을 참조하십시오. 또한 사용 가능한 [!DNL Adobe I/O] 런타임 및 OpenWhisk 리소스는 다음과 같습니다.
 
 * [Apache OpenWhisk를 시작합니다](https://github.com/apache/incubator-openwhisk/tree/master/docs#getting-started-with-openwhisk).
-* [랩:Adobe Sensei 함수와 Adobe I/O Runtime을 사용하여 합성 가능한 AI를 구축할 수 있습니다](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
-* [Adobe I/O Runtime FAQ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
+* [랩:Runtime을 사용하여 합성 가능한 AI [!DNL Adobe Sensei] functions and [!DNL Adobe I/O] 를 구축할 수 있습니다](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
+* [[!DNL Adobe I/O] 런타임 FAQ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
 
 <!-- **TBD** for post-release:
 * Link to Firefly open-source components.

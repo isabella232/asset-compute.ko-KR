@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]에 대한 현상.'
 description: ' [!DNL Asset Compute Service]을(를) 사용하여 사용자 정의 응용 프로그램을 만듭니다.'
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -282,7 +282,7 @@ const key = params.secretKey;
 
 Runtime의 작업에 대한 기본 시간 제한은 1분이지만 `timeout` 제한(밀리초)을 설정하여 이를 높일 수 있습니다. 더 큰 파일을 처리하려면 이 시간을 늘리십시오. 소스를 다운로드하고 파일을 처리하고 변환을 업로드하는 데 걸리는 총 시간을 고려합니다. 작업이 시간 초과되는 경우, 즉 지정된 시간 제한 전에 활성화를 반환하지 않으면 런타임은 컨테이너를 폐기하고 다시 사용하지 않습니다.
 
-기본적으로 asset compute 애플리케이션은 네트워크 및 디스크 IO 바인딩되어 있는 경향이 있습니다. 소스 파일을 먼저 다운로드해야 하며, 처리가 종종 IO 중량인 다음 결과 변환이 다시 업로드됩니다.
+기본적으로 asset compute 애플리케이션은 네트워크 및 디스크 입력 또는 출력 바인딩된 애플리케이션입니다. 소스 파일을 먼저 다운로드해야 하며, 처리 시 종종 리소스가 많이 소모되는 경우가 있고 그 결과 변환이 다시 업로드됩니다.
 
 작업 컨테이너에 사용할 수 있는 메모리는 `memorySize`에서 MB로 지정됩니다. 현재 이 값은 컨테이너가 얻는 CPU 액세스 정도를 정의하며, 가장 중요한 것은 Runtime 사용 비용의 핵심 요소입니다(큰 컨테이너 비용이 더 많음). 처리에는 더 많은 메모리 또는 CPU가 필요하지만 컨테이너가 더 클수록 전체 처리량이 감소하므로 리소스를 낭비하지 않도록 주의하십시오.
 

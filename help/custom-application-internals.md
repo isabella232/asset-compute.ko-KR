@@ -1,8 +1,8 @@
 ---
-title: 사용자 정의 애플리케이션의 작업 내용을 파악합니다.
+title: 사용자 정의 애플리케이션의 작업 이해
 description: 사용자 정의 응용 프로그램의 작동 방식을 이해하는 데 도움이 되도록  [!DNL Asset Compute Service] 사용자 정의 응용 프로그램의 내부 작업.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 0%

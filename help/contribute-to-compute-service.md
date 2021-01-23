@@ -2,7 +2,7 @@
 title: ' [!DNL Asset Compute Service]의 오픈 소스 구성 요소에 기여합니다.'
 description: ' [!DNL Asset Compute Service]의 오픈 소스 구성 요소에 기여합니다.'
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%

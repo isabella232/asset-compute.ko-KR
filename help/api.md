@@ -1,8 +1,8 @@
 ---
-title: '[!DNL Asset Compute Service] HTTP API.'
+title: '[!DNL Asset Compute Service] HTTP API'
 description: '[!DNL Asset Compute Service] HTTP API를 사용하여 사용자 정의 응용 프로그램을 만듭니다.'
 translation-type: tm+mt
-source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 2%

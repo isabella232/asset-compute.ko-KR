@@ -1,8 +1,8 @@
 ---
-title: ' [!DNL Asset Compute Service]의 릴리스 노트입니다.'
+title: ' [!DNL Asset Compute Service]의 릴리스 노트'
 description: ' [!DNL Asset Compute Service]의 새로운 기능, 개선 사항 및 알려진 문제.'
 translation-type: tm+mt
-source-git-commit: c57867cd896e4ccb9402e6eeb0eea133faaa0e5d
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -38,7 +38,7 @@ To test your custom applications with the [developer tool](https://github.com/ad
 
 ## Contribute {#contribute-open-source}
 
-[!DNL Asset Compute Service] 확장 기능은 확장 개발자의 공헌을 받은 github. [com/adobe의 개방형 개발 모델](https://github.com/adobe) 을 통해 개발됩니다. 맞춤형 애플리케이션을 개발, 제작, 테스트 및 배포하고 관련 있는 모든 구성 요소는 오픈 소스입니다. 계산 서비스[에 기여할 방법 및 장소를 참조하십시오.](contribute-to-compute-service.md)
+[!DNL Asset Compute Service] 확장 기능은 확장 개발자의 공헌을 받은 github. [com/adobe의 개방형 개발 모델](https://github.com/adobe) 을 통해 개발됩니다. 맞춤형 애플리케이션을 개발, 제작, 테스트 및 배포하고 관련 있는 모든 구성 요소는 오픈 소스입니다. 계산 서비스](contribute-to-compute-service.md)에 기여할 방법 및 장소를 참조하십시오.[
 
 <!-- **TBD:**
 * Are we versioning the releases?

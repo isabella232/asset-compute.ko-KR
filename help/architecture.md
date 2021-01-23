@@ -1,8 +1,8 @@
 ---
-title: ' [!DNL Asset Compute Service]의 아키텍처.'
+title: ' [!DNL Asset Compute Service]의 아키텍처'
 description: ' [!DNL Asset Compute Service] API, 응용 프로그램 및 SDK가 함께 작동하여 클라우드 기본 에셋 처리 서비스를 제공하는 방법입니다.'
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%

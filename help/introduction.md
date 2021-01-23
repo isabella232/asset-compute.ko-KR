@@ -1,8 +1,8 @@
 ---
-title: ' [!DNL Asset Compute Service] 소개.'
+title: ' [!DNL Asset Compute Service] 소개'
 description: '[!DNL Asset Compute Service] 는 복잡성을 줄이고 확장성을 향상시키는 클라우드 기반의 자산 처리 서비스입니다.'
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%

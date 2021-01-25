@@ -1,8 +1,8 @@
 ---
-title: ' [!DNL Asset Compute Service] 사용자 지정 응용 프로그램을 배포합니다.'
+title: ' [!DNL Asset Compute Service] 사용자 지정 응용 프로그램 배포'
 description: ' [!DNL Asset Compute Service] 사용자 지정 응용 프로그램을 배포합니다.'
 translation-type: tm+mt
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%

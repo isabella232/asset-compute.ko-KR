@@ -2,7 +2,7 @@
 title: ' [!DNL Asset Compute Service]에 필요한 개발 환경을 설정합니다.'
 description: '사용자 지정 코드 만들기 및 테스트를 시작하기 위한 개발자 환경 설정 [!DNL Asset Compute Service] '
 translation-type: tm+mt
-source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%

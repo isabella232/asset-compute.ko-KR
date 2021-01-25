@@ -1,8 +1,8 @@
 ---
-title: '[!DNL Adobe Asset Compute Service] 사용 안내서.'
+title: '[!DNL Adobe Asset Compute Service] 사용 안내서'
 description: 이 설명서는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 작업 [!DNL Asset Compute Service] 에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 1%

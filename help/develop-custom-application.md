@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]에 대한 현상'
 description: ' [!DNL Asset Compute Service]을(를) 사용하여 사용자 정의 응용 프로그램을 만듭니다.'
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -96,11 +96,14 @@ Firefly 프로젝트 루트의 ENV 파일에 개발자 도구에 대한 다음 �
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. `console.json`이(가) Firefly 앱의 루트에 직접 있지 않은 경우 Adobe 개발자 콘솔 통합 JSON 파일에 절대 경로를 추가하십시오. 프로젝트 작업 영역에서 다운로드한 파일과 동일한 [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) 파일입니다. 또는 ENV 파일에 경로를 추가하는 대신 `aio app use <path_to_console_json>` 명령을 사용할 수도 있습니다.
+1. Adobe 개발자 콘솔에서 파일을 다운로드합니다. 프로젝트의 루트로 이동하고 오른쪽 위 모서리에서 &quot;모두 다운로드&quot;를 클릭합니다. 파일이 파일 이름으로 `<namespace>-<workspace>.json`로 다운로드됩니다. 다음 중 하나를 수행하십시오.
 
-   ```conf
-   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
-   ```
+   * 파일의 이름을 `config.json`으로 변경하고 프로젝트의 루트에서 이동합니다.
+   * 선택적으로 Adobe 개발자 콘솔 통합 JSON 파일에 절대 경로를 추가할 수 있습니다. 프로젝트 작업 영역에서 다운로드한 파일과 동일한 [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) 파일입니다.
+
+      ```conf
+      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+      ```
 
 1. S3 또는 Azure 저장소 자격 증명을 추가합니다. 하나의 클라우드 스토리지 솔루션만 액세스할 수 있습니다.
 
@@ -116,6 +119,10 @@ Firefly 프로젝트 루트의 ENV 파일에 개발자 도구에 대한 다음 �
    AZURE_STORAGE_KEY=
    AZURE_STORAGE_CONTAINER_NAME=
    ```
+
+>[!TIP]
+>
+>`config.json` 파일에 자격 증명이 있습니다. 프로젝트 내에서 JSON 파일을 `.gitignore` 파일에 추가하여 공유를 방지합니다. .env 및 .aio 파일에도 동일하게 적용됩니다.
 
 ## 응용 프로그램 {#run-custom-application} 실행
 

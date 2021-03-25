@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service]에 대한 현상'
 description: ' [!DNL Asset Compute Service]을(를) 사용하여 사용자 정의 응용 프로그램을 만듭니다.'
 translation-type: tm+mt
-source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
+source-git-commit: 7ae47fdb7ff91e1388d2037d90abe35fe5218216
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Firefly 프로젝트 루트의 ENV 파일에 개발자 도구에 대한 다음 �
 
 1. Adobe 개발자 콘솔에서 파일을 다운로드합니다. 프로젝트의 루트로 이동하고 오른쪽 위 모서리에서 &quot;모두 다운로드&quot;를 클릭합니다. 파일이 파일 이름으로 `<namespace>-<workspace>.json`로 다운로드됩니다. 다음 중 하나를 수행하십시오.
 
-   * 파일의 이름을 `config.json`으로 변경하고 프로젝트의 루트에서 이동합니다.
+   * 파일의 이름을 `console.json`으로 변경하고 프로젝트의 루트에서 이동합니다.
    * 선택적으로 Adobe 개발자 콘솔 통합 JSON 파일에 절대 경로를 추가할 수 있습니다. 프로젝트 작업 영역에서 다운로드한 파일과 동일한 [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) 파일입니다.
 
       ```conf

@@ -1,9 +1,9 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: asset compute service
 solution: Experience Manager, Experience Manager Assets
-type: Documentation
-role: Developer
+type: 설명서
+role: 개발자
 user-guide-title: asset compute 서비스 안내서
 user-guide-description: 이 설명서는 사용자 지정 코드를 개발, 관리, 배포 및 해결하는 방법과 같은 작업 [!DNL Asset Compute Service] 에 대해 설명합니다.
 breadcrumb-title: asset compute 서비스 안내서
@@ -14,10 +14,10 @@ getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-
 tutorials-title: AEM 자습서
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 1cf682be00c984fa523963f5d4358575efffb50b
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 13%
+source-wordcount: '122'
+ht-degree: 14%
 
 ---
 

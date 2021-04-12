@@ -1,14 +1,14 @@
 ---
 title: 사용자 지정 응용 프로그램 테스트 및 디버그 [!DNL Asset Compute Service] 사용자 지정 응용 프로그램
 description: '사용자 지정 응용 프로그램을 테스트하고 디버깅합니다. [!DNL Asset Compute Service] '
+exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
-
 
 # 사용자 지정 응용 프로그램 {#test-debug-custom-worker} 테스트 및 디버그
 
@@ -21,7 +21,7 @@ $ aio app test
 ```
 
 <!-- TBD
-To run tests for a custom application, run `adobe-asset-compute test-worker` command in the root of the custom application application application.
+To run tests for a custom application, run `aio asset-compute test-worker` command at the root of the custom application application.
 
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
 -->
@@ -173,8 +173,8 @@ tests/
 1. 사용자 설정 JSON 파일에 추가합니다. 이전 VS 코드 디버거를 계속 사용하고 있으며 새 디버그에는 wskdebug와 함께 [몇 가지 문제](https://github.com/apache/openwhisk-wskdebug/issues/74)가 있습니다.`"debug.javascript.usePreview": false`.
 1. `aio app run`을(를) 통해 열려 있는 앱의 인스턴스를 모두 닫습니다.
 1. `aio app deploy`을(를) 사용하여 최신 코드를 배포합니다.
-1. `npx adobe-asset-compute devtool`을(를) 사용하여 Asset compute 장치 도구만 실행합니다. 열어 두어라.
-1. VS 코드 편집기에서 아래 디버그 구성을 `launch.json`에 추가합니다.
+1. `aio asset-compute devtool`을(를) 사용하여 Asset compute 장치 도구만 실행합니다. 열어 두어라.
+1. VS 코드 편집기에서 다음 디버그 구성을 `launch.json`에 추가합니다.
 
    ```json
    {
@@ -195,7 +195,7 @@ tests/
    }
    ```
 
-   `aio app deploy`의 출력에서 ACTION NAME을 가져옵니다. `Your deployed actions -> TypicalCoffeeCat-0.0.1/__secured_worker` 같습니다.
+   `aio app deploy`의 출력에서 `ACTION NAME`을 가져옵니다.
 
 1. 실행/디버그 구성에서 `wskdebug worker`을 선택하고 재생 아이콘을 누릅니다. **[!UICONTROL 디버그 콘솔]** 창에 **[!UICONTROL 활성화 준비]**&#x200B;가 표시될 때까지 기다립니다.
 

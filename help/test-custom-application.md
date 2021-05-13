@@ -2,10 +2,9 @@
 title: 사용자 지정 응용 프로그램 테스트 및 디버그 [!DNL Asset Compute Service] 사용자 지정 응용 프로그램
 description: '사용자 지정 응용 프로그램을 테스트하고 디버깅합니다. [!DNL Asset Compute Service] '
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-translation-type: tm+mt
-source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
+source-git-commit: ebc0d717b3f6fc4518f4a79cd44ebe8fdcf9ec6a
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -137,6 +136,10 @@ tests/
 ### 테스트 예상 오류 {#test-unexpected-errors}
 
 오류 테스트 케이스는 예상 `rendition.*` 파일을 포함할 수 없으며 `params.json` 파일 내에 예상 `errorReason`을 정의해야 합니다.
+
+>[!NOTE]
+>
+>테스트 케이스에 예상 `rendition.*` 파일이 없고 `params.json` 파일 내에 예상 `errorReason`을 정의하지 않으면 `errorReason`의 오류 사례로 간주됩니다.
 
 테스트 케이스 구조 오류:
 

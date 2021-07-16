@@ -1,6 +1,6 @@
 ---
 cloud: Experience Cloud
-solution-title: asset compute 서비스
+solution-title: Experience Manager, Cloud Service으로 Experience Manager, 자산 Experience Manager
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
 solution-icon: assets/experience-cloud-logo-24.png
 getting-started-title: 시작하기
@@ -10,11 +10,10 @@ tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/asset-compute.ko-KR
 index: y
-translation-type: tm+mt
-source-git-commit: 1cf682be00c984fa523963f5d4358575efffb50b
+source-git-commit: 5f987f28fdf8d074ceb6226d21a5f64aad67bf04
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 77%
+source-wordcount: '162'
+ht-degree: 73%
 
 ---
 

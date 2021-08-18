@@ -2,7 +2,7 @@
 title: '[!DNL Asset Compute Service] HTTP API'
 description: '[!DNL Asset Compute Service] 사용자 지정 애플리케이션을 만들기 위한 HTTP API.'
 exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: 780ddb7e119a28a1f8cc555ed2f1d3cee543b73f
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 2%
@@ -61,19 +61,19 @@ API의 사용은 개발 용도로 제한됩니다. API는 사용자 지정 애�
 따라서 [!DNL Adobe Developer Console] 프로젝트를 `Asset Compute`, `I/O Events` 및 `I/O Management API` 서비스에 가입해야 합니다. 개별 범위의 분류는 다음과 같습니다.
 
 * 기본
-   * 범위:`openid,AdobeID`
+   * 범위: `openid,AdobeID`
 
 * asset compute
-   * meascope:`asset_compute_meta`
-   * 범위:`asset_compute,read_organizations`
+   * meascope: `asset_compute_meta`
+   * 범위: `asset_compute,read_organizations`
 
 * [!DNL Adobe I/O] 이벤트
-   * meascope:`event_receiver_api`
-   * 범위:`event_receiver,event_receiver_api`
+   * meascope: `event_receiver_api`
+   * 범위: `event_receiver,event_receiver_api`
 
 * [!DNL Adobe I/O] 관리 API
-   * meascope:`ent_adobeio_sdk`
-   * 범위:`adobeio_api,additional_info.roles,additional_info.projectedProductContext`
+   * meascope: `ent_adobeio_sdk`
+   * 범위: `adobeio_api,additional_info.roles,additional_info.projectedProductContext`
 
 ## 등록 {#register}
 
@@ -103,7 +103,7 @@ API의 사용은 개발 용도로 제한됩니다. API는 사용자 지정 애�
 
 HTTP 상태 코드는 다음과 같습니다.
 
-* **200 성공**:요청이 성공하면. 여기에는 `/process`(성공 시 `rendition_created` 이벤트 유형 또는 실패 시 `rendition_failed`)를 통해 트리거된 비동기 처리 결과에 대한 알림을 받는 `journal` URL이 포함되어 있습니다.
+* **200 성공**: 요청이 성공하면. 여기에는 `/process`(성공 시 `rendition_created` 이벤트 유형 또는 실패 시 `rendition_failed`)를 통해 트리거된 비동기 처리 결과에 대한 알림을 받는 `journal` URL이 포함되어 있습니다.
 
    ```json
    {
@@ -113,12 +113,12 @@ HTTP 상태 코드는 다음과 같습니다.
    }
    ```
 
-* **401 권한 없음**:이 문제는 요청에 유효한 인증 [이 없을 때 발생합니다](#authentication-and-authorization). 예로는 잘못된 액세스 토큰 또는 잘못된 API 키가 있습니다.
+* **401 권한 없음**: 이 문제는 요청에 유효한 인증 [이 없을 때 발생합니다](#authentication-and-authorization). 예로는 잘못된 액세스 토큰 또는 잘못된 API 키가 있습니다.
 
-* **403 금지**:이 문제는 요청에 유효한 권한이 없는 경우  [발생합니다](#authentication-and-authorization). 예를 유효한 액세스 토큰일 수 있지만 Adobe 개발자 콘솔 프로젝트(기술 계정)가 일부 필수 서비스에 가입되지 않았습니다.
+* **403 금지**: 이 문제는 요청에 유효한 권한이 없는 경우  [발생합니다](#authentication-and-authorization). 예를 유효한 액세스 토큰일 수 있지만 Adobe 개발자 콘솔 프로젝트(기술 계정)가 일부 필수 서비스에 가입되지 않았습니다.
 
-* **429 너무 많은 요청**:이 클라이언트가 시스템에 오버로드되거나 다른 방식으로 인해 발생합니다. 클라이언트는 [지수 백오프](https://en.wikipedia.org/wiki/Exponential_backoff)를 사용하여 다시 시도해야 합니다. 몸이 비어 있습니다.
-* **4xx 오류**:다른 클라이언트 오류 및 등록에 실패한 경우 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
+* **429 너무 많은 요청**: 이 클라이언트가 시스템에 오버로드되거나 다른 방식으로 인해 발생합니다. 클라이언트는 [지수 백오프](https://en.wikipedia.org/wiki/Exponential_backoff)를 사용하여 다시 시도해야 합니다. 몸이 비어 있습니다.
+* **4xx 오류**: 다른 클라이언트 오류 및 등록에 실패한 경우 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
 
    ```json
    {
@@ -128,7 +128,7 @@ HTTP 상태 코드는 다음과 같습니다.
    }
    ```
 
-* **5xx 오류**:다른 서버 측 오류가 발생하여 등록하지 못할 때 발생합니다. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
+* **5xx 오류**: 다른 서버 측 오류가 발생하여 등록하지 못할 때 발생합니다. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
 
    ```json
    {
@@ -160,7 +160,7 @@ HTTP 상태 코드는 다음과 같습니다.
 
 상태 코드는 다음과 같습니다.
 
-* **200 성공**:등록 및 분개가 발견되어 제거될 때 발생합니다.
+* **200 성공**: 등록 및 분개가 발견되어 제거될 때 발생합니다.
 
    ```json
    {
@@ -169,11 +169,11 @@ HTTP 상태 코드는 다음과 같습니다.
    }
    ```
 
-* **401 권한 없음**:이 문제는 요청에 유효한 인증 [이 없을 때 발생합니다](#authentication-and-authorization). 예로는 잘못된 액세스 토큰 또는 잘못된 API 키가 있습니다.
+* **401 권한 없음**: 이 문제는 요청에 유효한 인증 [이 없을 때 발생합니다](#authentication-and-authorization). 예로는 잘못된 액세스 토큰 또는 잘못된 API 키가 있습니다.
 
-* **403 금지**:이 문제는 요청에 유효한 권한이 없는 경우  [발생합니다](#authentication-and-authorization). 예를 유효한 액세스 토큰일 수 있지만 Adobe 개발자 콘솔 프로젝트(기술 계정)가 일부 필수 서비스에 가입되지 않았습니다.
+* **403 금지**: 이 문제는 요청에 유효한 권한이 없는 경우  [발생합니다](#authentication-and-authorization). 예를 유효한 액세스 토큰일 수 있지만 Adobe 개발자 콘솔 프로젝트(기술 계정)가 일부 필수 서비스에 가입되지 않았습니다.
 
-* **404 찾을 수 없음**:지정된 자격 증명에 대한 현재 등록이 없는 경우 발생합니다.
+* **404 찾을 수 없음**: 지정된 자격 증명에 대한 현재 등록이 없는 경우 발생합니다.
 
    ```json
    {
@@ -182,9 +182,9 @@ HTTP 상태 코드는 다음과 같습니다.
    }
    ```
 
-* **429 너무 많은 요청**:시스템이 오버로드될 때 발생합니다. 클라이언트는 [지수 백오프](https://en.wikipedia.org/wiki/Exponential_backoff)를 사용하여 다시 시도해야 합니다. 몸이 비어 있습니다.
+* **429 너무 많은 요청**: 시스템이 오버로드될 때 발생합니다. 클라이언트는 [지수 백오프](https://en.wikipedia.org/wiki/Exponential_backoff)를 사용하여 다시 시도해야 합니다. 몸이 비어 있습니다.
 
-* **4xx 오류**:다른 클라이언트 오류가 발생하여 등록을 취소하지 못한 경우 발생합니다. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
+* **4xx 오류**: 다른 클라이언트 오류가 발생하여 등록을 취소하지 못한 경우 발생합니다. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
 
    ```json
    {
@@ -194,7 +194,7 @@ HTTP 상태 코드는 다음과 같습니다.
    }
    ```
 
-* **5xx 오류**:다른 서버 측 오류가 발생하여 등록하지 못할 때 발생합니다. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
+* **5xx 오류**: 다른 서버 측 오류가 발생하여 등록하지 못할 때 발생합니다. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
 
    ```json
    {
@@ -234,8 +234,8 @@ HTTP 상태 코드는 다음과 같습니다.
 
 | 이름 | 유형 | 설명 | 예 |
 |--------------|----------|-------------|---------|
-| `source` | `string` | 처리할 소스 자산의 URL입니다. 요청된 변환 형식을 기반으로 하는 옵션(예:`fmt=zip`) | `"http://example.com/image.jpg"` |
-| `source` | `object` | 처리할 소스 자산을 설명합니다. 아래의 [소스 개체 필드](#source-object-fields)에 대한 설명을 참조하십시오. 요청된 변환 형식을 기반으로 하는 옵션(예:`fmt=zip`) | `{"url": "http://example.com/image.jpg", "mimeType": "image/jpeg" }` |
+| `source` | `string` | 처리할 소스 자산의 URL입니다. 요청된 변환 형식을 기반으로 하는 옵션(예: `fmt=zip`) | `"http://example.com/image.jpg"` |
+| `source` | `object` | 처리할 소스 자산을 설명합니다. 아래의 [소스 개체 필드](#source-object-fields)에 대한 설명을 참조하십시오. 요청된 변환 형식을 기반으로 하는 옵션(예: `fmt=zip`) | `{"url": "http://example.com/image.jpg", "mimeType": "image/jpeg" }` |
 | `renditions` | `array` | 소스 파일에서 생성할 표현물. 각 변환 개체는 [변환 명령](#rendition-instructions)을 지원합니다. 필수. | `[{ "target": "https://....", "fmt": "png" }]` |
 
 `source`은(는) URL로 표시되는 `<string>`이거나 추가 필드가 있는 `<object>`일 수 있습니다. 다음 변형은 유사합니다.
@@ -300,7 +300,7 @@ HTTP 상태 코드는 다음과 같습니다.
 
 상태 코드:
 
-* **200 성공**:요청이 성공적으로 제출된 경우. 응답 JSON에 `"ok": true` 포함:
+* **200 성공**: 요청이 성공적으로 제출된 경우. 응답 JSON에 `"ok": true` 포함:
 
    ```json
    {
@@ -309,7 +309,7 @@ HTTP 상태 코드는 다음과 같습니다.
    }
    ```
 
-* **400 잘못된 요청**:요청 JSON에 필수 필드가 누락되는 등 요청이 잘못 구성된 경우. 응답 JSON에 `"ok": false` 포함:
+* **400 잘못된 요청**: 요청 JSON에 필수 필드가 누락되는 등 요청이 잘못 구성된 경우. 응답 JSON에 `"ok": false` 포함:
 
    ```json
    {
@@ -319,10 +319,10 @@ HTTP 상태 코드는 다음과 같습니다.
    }
    ```
 
-* **401 권한 없음**:요청에 유효한  [인증이 없는 경우](#authentication-and-authorization). 예로는 잘못된 액세스 토큰 또는 잘못된 API 키가 있습니다.
-* **403 금지**:요청에 유효한 권한 [이 없는 경우](#authentication-and-authorization). 예를 유효한 액세스 토큰일 수 있지만 Adobe 개발자 콘솔 프로젝트(기술 계정)가 일부 필수 서비스에 가입되지 않았습니다.
-* **429 너무 많은 요청**:시스템에 이 클라이언트 또는 일반적으로 오버로드되는 경우입니다. 클라이언트는 [지수 백오프](https://en.wikipedia.org/wiki/Exponential_backoff)를 사용하여 다시 시도할 수 있습니다. 몸이 비어 있습니다.
-* **4xx 오류**:다른 클라이언트 오류가 발생한 경우. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
+* **401 권한 없음**: 요청에 유효한  [인증이 없는 경우](#authentication-and-authorization). 예로는 잘못된 액세스 토큰 또는 잘못된 API 키가 있습니다.
+* **403 금지**: 요청에 유효한 권한 [이 없는 경우](#authentication-and-authorization). 예를 유효한 액세스 토큰일 수 있지만 Adobe 개발자 콘솔 프로젝트(기술 계정)가 일부 필수 서비스에 가입되지 않았습니다.
+* **429 너무 많은 요청**: 시스템에 이 클라이언트 또는 일반적으로 오버로드되는 경우입니다. 클라이언트는 [지수 백오프](https://en.wikipedia.org/wiki/Exponential_backoff)를 사용하여 다시 시도할 수 있습니다. 몸이 비어 있습니다.
+* **4xx 오류**: 다른 클라이언트 오류가 발생한 경우. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
 
    ```json
    {
@@ -332,7 +332,7 @@ HTTP 상태 코드는 다음과 같습니다.
    }
    ```
 
-* **5xx 오류**:다른 서버 측 오류가 발생한 경우. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
+* **5xx 오류**: 다른 서버 측 오류가 발생한 경우. 이 모든 오류에 대해 보장되지 않지만 일반적으로 이와 같은 JSON 응답이 반환됩니다.
 
    ```json
    {
@@ -346,26 +346,26 @@ HTTP 상태 코드는 다음과 같습니다.
 
 모든 JSON 응답(있는 경우)에는 `X-Request-Id` 헤더와 동일한 값인 `requestId`이 포함됩니다. 항상 있으므로 헤더에서 읽는 것이 좋습니다. `requestId` 은 처리 요청과 관련된 모든 이벤트도 `requestId`(으)로 반환됩니다. 클라이언트는 이 문자열의 형식을 가정하지 않아야 하며 불투명 문자열 식별자입니다.
 
-## 사후 처리 옵트인 {#opt-in-to-post-processing}
+## 사후 처리에 옵트인 {#opt-in-to-post-processing}
 
 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk)는 일련의 기본 이미지 사후 처리 옵션을 지원합니다. 사용자 정의 작업자는 변환 객체의 필드 `postProcess`을 `true`로 설정하여 사후 처리에 명시적으로 옵트인할 수 있습니다.
 
 지원되는 사용 사례는 다음과 같습니다.
 
-* 자르기.w, crop.h, crop.x 및 crop.y로 제한이 정의된 사각형으로 변환을 자릅니다.변환 개체에서 `instructions.crop`에 의해 정의됩니다.
+* 자르기.w, crop.h, crop.x 및 crop.y로 제한이 정의된 사각형으로 변환을 자릅니다. 변환 개체에서 `instructions.crop`에 의해 정의됩니다.
 * 폭, 높이 또는 둘 다 사용하여 이미지 크기를 조정할 수 있습니다. 변환 개체에서 `instructions.width` 및 `instructions.height`에 의해 정의됩니다. 너비나 높이만 사용하여 크기를 조정하려면 값을 하나만 설정하십시오. Compute Service는 종횡비를 유지합니다.
 * JPEG 이미지의 품질을 설정합니다. 변환 개체에서 `instructions.quality`에 의해 정의됩니다. 가장 좋은 품질은 `100`으로 표시되며, 값이 작을수록 품질이 저하됩니다.
 * 인터레이스 이미지를 만듭니다. 변환 개체에서 `instructions.interlace`에 의해 정의됩니다.
 * 픽셀에 적용된 비율을 조정하여 데스크톱 게시 목적으로 렌더링된 크기를 조정하도록 DPI를 설정합니다. dpi 해상도를 변경하기 위해 변환 개체에 `instructions.dpi`에 의해 정의됩니다. 그러나 다른 해상도에서 동일한 크기가 되도록 이미지 크기를 조정하려면 `convertToDpi` 지침을 사용하십시오.
 * 렌더링된 너비나 높이가 지정된 대상 해상도(DPI)에서 원본과 동일하게 유지되도록 이미지 크기를 조정합니다. 변환 개체에서 `instructions.convertToDpi`에 의해 정의됩니다.
 
-## 자산에 워터마크 지정 {#add-watermark}
+## 자산을 워터마크 지정 {#add-watermark}
 
 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk)에서는 워터마크를 PNG, JPEG, TIFF 및 GIF 이미지 파일에 추가할 수 있습니다. 워터마크는 표현물의 `watermark` 개체의 변환 지침에 따라 추가됩니다.
 
 워터마크는 변환 후 처리 중에 수행됩니다. 자산을 워터마킹하려면 사용자 지정 작업자 [이 변환 개체에 대해 `postProcess` 필드를 `true`로 설정하여 사후 처리](#opt-in-to-post-processing)에 옵트인합니다. 작업자가 옵트인하지 않으면 요청의 표현물 개체에 워터마크 개체가 설정되어 있어도 워터마킹이 적용되지 않습니다.
 
-## 변환 지침 {#rendition-instructions}
+## 표현물 지침 {#rendition-instructions}
 
 이러한 옵션은 [/process](#process-request)의 `renditions` 배열에 사용할 수 있는 옵션입니다.
 
@@ -376,7 +376,7 @@ HTTP 상태 코드는 다음과 같습니다.
 | `fmt` | `string` | 변환 대상 형식은 텍스트 추출의 경우 `text`, XMP 메타데이터를 xml로 추출하는 경우 `xmp`일 수도 있습니다. [지원되는 형식](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)을 참조하십시오 | `png` |
 | `worker` | `string` | [사용자 지정 응용 프로그램](develop-custom-application.md)의 URL입니다. `https://` URL이어야 합니다. 이 필드가 있으면 사용자 정의 응용 프로그램에 의해 표현물이 만들어집니다. 그런 다음 사용자 지정 애플리케이션에서 다른 모든 세트 변환 필드가 사용됩니다. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | HTTP PUT을 사용하여 생성된 변환을 업로드해야 하는 URL입니다. | `http://w.com/img.jpg` |
-| `target` | `object` | 생성된 표현물에 대한 여러 부분으로 미리 서명된 URL 업로드 정보입니다. 이 [다중 부분 업로드 동작](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html)이 있는 [AEM/Oak 직접 이진 업로드](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)에 대한 것입니다.<br>필드:<ul><li>`urls`:사전 서명된 각 부분 URL에 대해 하나씩, 문자열 배열</li><li>`minPartSize`:한 부분에 사용할 최소 크기 = url</li><li>`maxPartSize`:한 부분에 사용할 최대 크기 = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | 생성된 표현물에 대한 여러 부분으로 미리 서명된 URL 업로드 정보입니다. 이 [다중 부분 업로드 동작](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html)이 있는 [AEM/Oak 직접 이진 업로드](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)에 대한 것입니다.<br>필드:<ul><li>`urls`: 사전 서명된 각 부분 URL에 대해 하나씩, 문자열 배열</li><li>`minPartSize`: 한 부분에 사용할 최소 크기 = url</li><li>`maxPartSize`: 한 부분에 사용할 최대 크기 = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | 클라이언트에서 제어하고 변환 이벤트로 전달된 선택적 예약 공간. 클라이언트가 변환 이벤트를 식별하는 사용자 지정 정보를 추가할 수 있습니다. 클라이언트가 언제든지 이 설정을 변경할 수 있으므로 사용자 지정 애플리케이션에서 수정하거나 의존하지 않아야 합니다. | `{ ... }` |
 
 ### 표현물 특정 필드 {#rendition-specific-fields}
@@ -394,9 +394,9 @@ HTTP 상태 코드는 다음과 같습니다.
 | `xmp` | `string` | XMP 메타데이터 원본에 쓰기 기능으로만 사용되며, 지정된 표현물에 다시 쓰기 위해 base64 인코딩 XMP입니다. |  |
 | `interlace` | `bool` | 인터레이스 PNG 또는 GIF 또는 점진적 JPEG를 `true`로 설정하여 만듭니다. 다른 파일 형식에는 영향을 주지 않습니다. |  |
 | `jpegSize` | `number` | JPEG 파일의 대략적인 크기(바이트)입니다. 이 값은 `quality` 설정을 무시합니다. 다른 형식에는 영향을 주지 않습니다. |  |
-| `dpi` | `number` 또는 `object` | x 및 y DPI를 설정합니다. 간단히 하기 위해 x와 y 모두에 사용되는 단일 숫자로 설정할 수도 있습니다.이미지 자체에는 영향을 주지 않습니다. | `96` 또는 `{ xdpi: 96, ydpi: 96 }` |
+| `dpi` | `number` 또는 `object` | x 및 y DPI를 설정합니다. 간단히 하기 위해 x와 y 모두에 사용되는 단일 숫자로 설정할 수도 있습니다. 이미지 자체에는 영향을 주지 않습니다. | `96` 또는 `{ xdpi: 96, ydpi: 96 }` |
 | `convertToDpi` | `number` 또는 `object` | x 및 y DPI는 물리적 크기를 유지하면서 다시 샘플링합니다. 간단히 하기 위해 x와 y 모두에 사용되는 단일 숫자로 설정할 수도 있습니다. | `96` 또는 `{ xdpi: 96, ydpi: 96 }` |
-| `files` | `array` | ZIP 보관 파일 목록(`fmt=zip`). 각 항목은 URL 문자열이거나, 필드가 있는 개체일 수 있습니다.<ul><li>`url`:파일을 다운로드할 URL</li><li>`path`:ZIP에서 이 경로 아래에 파일을 저장합니다</li></ul> | `[{ "url": "https://host/asset.jpg", "path": "folder/location/asset.jpg" }]` |
+| `files` | `array` | ZIP 보관 파일 목록(`fmt=zip`). 각 항목은 URL 문자열이거나, 필드가 있는 개체일 수 있습니다.<ul><li>`url`: 파일을 다운로드할 URL</li><li>`path`: ZIP에서 이 경로 아래에 파일을 저장합니다</li></ul> | `[{ "url": "https://host/asset.jpg", "path": "folder/location/asset.jpg" }]` |
 | `duplicate` | `string` | ZIP 보관 파일(`fmt=zip`)에 대한 중복 처리. 기본적으로 ZIP의 동일한 경로에 저장된 여러 파일은 오류를 생성합니다. `duplicate`을 `ignore`(으)로 설정하면 첫 번째 자산만 저장되고 나머지 자산은 무시됩니다. | `ignore` |
 | `watermark` | `object` | [워터마크](#watermark-specific-fields)에 대한 지침을 포함합니다. |  |
 
@@ -422,7 +422,7 @@ PNG 형식은 워터마크로 사용됩니다.
 | `rendition_created` | 성공적으로 처리되고 업로드된 각 표현물에 대해 전송됩니다. |
 | `rendition_failed` | 처리하거나 업로드하지 못한 각 표현물에 대해 전송됩니다. |
 
-### 이벤트 특성 {#event-attributes}
+### 이벤트 속성 {#event-attributes}
 
 | 특성 | 유형 | 이벤트 | 설명 |
 |-------------|----------|---------------|-------------|
@@ -446,7 +446,7 @@ PNG 형식은 워터마크로 사용됩니다.
 | `tiff:ImageWidth` | 표현물의 픽셀 단위 폭입니다. 이미지 표현물에 대해서만 표시됩니다. |
 | `tiff:ImageLength` | 표현물의 길이(픽셀 단위)입니다. 이미지 표현물에 대해서만 표시됩니다. |
 
-### 오류 원인 {#error-reasons}
+### 오류 이유 {#error-reasons}
 
 | 이유 | 설명 |
 |---------|-------------|

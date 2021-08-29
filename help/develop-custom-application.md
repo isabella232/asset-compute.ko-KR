@@ -2,9 +2,9 @@
 title: 개발 대상 [!DNL Asset Compute Service]
 description: ' [!DNL Asset Compute Service]을 사용하여 사용자 지정 응용 프로그램을 만듭니다.'
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 0%
 * [필요한 소프트웨어 도구](/help/setup-environment.md#create-dev-environment)를 설치합니다.
 * 사용자 지정 응용 프로그램을 만들 준비가 되었는지 확인하려면 [환경 설정](setup-environment.md)을 참조하십시오.
 
-## 사용자 지정 응용 프로그램 {#create-custom-application} 만들기
+## 사용자 지정 애플리케이션 만들기 {#create-custom-application}
 
 [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli)가 로컬에 설치되어 있는지 확인하십시오.
 
-1. 사용자 지정 애플리케이션을 만들려면 [Firefly 앱](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli)을 만듭니다. 이렇게 하려면 터미널에서 `aio app init <app-name>` 을 실행하십시오.
+1. 사용자 지정 애플리케이션을 만들려면 [Firefly 앱](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli)을 만듭니다. 이렇게 하려면 터미널에서 `aio app init <app-name>` 을 실행하십시오.
 
-   아직 로그인하지 않은 경우 이 명령은 브라우저에서 Adobe ID을 사용하여 [Developer Console](https://console.adobe.io/)에 로그인하라는 메시지를 표시합니다. cli에서 로그인에 대한 자세한 내용은 [여기](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli)를 참조하십시오.
+   아직 로그인하지 않은 경우 이 명령은 브라우저에서 Adobe ID을 사용하여 [Developer Console](https://console.adobe.io/)에 로그인하라는 메시지를 표시합니다. cli에서 로그인에 대한 자세한 내용은 [여기](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli)를 참조하십시오.
 
-   Adobe은 로그인하는 것을 권장합니다. 문제가 있는 경우 지침 [에 따라](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)에 로그인하지 않고 앱을 만드십시오.
+   Adobe은 로그인하는 것을 권장합니다. 문제가 있는 경우 지침 [에 따라](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user)에 로그인하지 않고 앱을 만드십시오.
 
 1. 로그인한 후 CLI의 메시지에 따라 `Organization`, `Project` 및 `Workspace`를 선택하여 애플리케이션에 사용합니다. [환경을 설정할 때 만든 프로젝트 및 작업 공간을 선택하십시오](setup-environment.md).
 
@@ -60,13 +60,13 @@ ht-degree: 0%
 
 1. 화면의 나머지 부분에 따라 Visual Studio 코드(또는 즐겨찾는 코드 편집기)에서 새 응용 프로그램을 엽니다. 사용자 지정 애플리케이션에 대한 스캐폴딩과 샘플 코드가 포함되어 있습니다.
 
-   Firefly 앱](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)의 기본 구성 요소에 대해 여기 를 참조하십시오.[
+   Firefly 앱](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application)의 기본 구성 요소에 대해 여기 를 참조하십시오.[
 
    템플릿 응용 프로그램은 응용 프로그램 표현물의 업로드, 다운로드 및 오케스트레이션에 대해 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk)를 활용하므로 개발자가 사용자 지정 응용 프로그램 로직만 구현하면 됩니다. `actions/<worker-name>` 폴더 내에서 `index.js` 파일은 사용자 지정 애플리케이션 코드를 추가할 위치입니다.
 
 사용자 지정 응용 프로그램에 대한 예제 및 아이디어는 [예제 사용자 지정 응용 프로그램](#try-sample)을 참조하십시오.
 
-### 자격 증명 {#add-credentials} 추가
+### 자격 증명 추가 {#add-credentials}
 
 응용 프로그램을 만들 때 로그인하면 대부분의 Firefly 자격 증명이 ENV 파일에서 수집됩니다. 하지만 개발자 도구를 사용하려면 추가 자격 증명이 필요합니다.
 
@@ -85,7 +85,7 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 
 지원되는 클라우드 저장소 컨테이너](https://github.com/adobe/asset-compute-devtool#prerequisites)에 액세스할 수 있어야 합니다. [ 필요에 따라 여러 프로젝트에서 여러 개발자가 이 컨테이너를 공유할 수 있습니다.
 
-#### ENV 파일 {#add-credentials-env-file}에 자격 증명 추가
+#### ENV 파일에 자격 증명 추가 {#add-credentials-env-file}
 
 개발자 도구에 대한 다음 자격 증명을 Firefly 프로젝트의 루트의 ENV 파일에 추가합니다.
 
@@ -98,7 +98,7 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 1. Adobe 개발자 콘솔에서 파일을 다운로드합니다. 프로젝트의 루트로 이동하고 오른쪽 위 모서리에 있는 &quot;Download All&quot;을 클릭합니다. 이 파일은 `<namespace>-<workspace>.json` 로 파일 이름으로 다운로드됩니다. 다음 중 하나를 수행하십시오.
 
    * 파일의 이름을 `console.json`(으)로 변경하고 프로젝트의 루트에서 이동합니다.
-   * 선택적으로, Adobe 개발자 콘솔 통합 JSON 파일에 절대 경로를 추가할 수 있습니다. 이는 프로젝트 작업 공간에서 다운로드한 동일한 [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) 파일입니다.
+   * 선택적으로, Adobe 개발자 콘솔 통합 JSON 파일에 절대 경로를 추가할 수 있습니다. 이는 프로젝트 작업 공간에서 다운로드한 동일한 [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) 파일입니다.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -123,7 +123,7 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 >
 >`config.json` 파일에 자격 증명이 있습니다. 프로젝트 내에서 JSON 파일을 `.gitignore` 파일에 추가하여 공유를 방지합니다. .env 및 .aio 파일에도 적용됩니다.
 
-## 응용 프로그램 {#run-custom-application} 실행
+## 응용 프로그램 실행 {#run-custom-application}
 
 asset compute 개발자 도구로 애플리케이션을 실행하기 전에 [자격 증명](#developer-tool-credentials)을 올바르게 구성합니다.
 
@@ -144,14 +144,14 @@ asset compute 개발자 도구로 애플리케이션을 실행하기 전에 [자
 
 응용 프로그램을 테스트하고 디버깅하는 방법은 [여기](test-custom-application.md)를 참조하십시오. 사용자 지정 응용 프로그램 개발을 마치면 [사용자 지정 응용 프로그램](deploy-custom-application.md)을 배포합니다.
 
-## Adobe {#try-sample}에서 제공하는 샘플 응용 프로그램을 사용해 보십시오
+## Adobe에서 제공하는 샘플 응용 프로그램을 사용해 보십시오 {#try-sample}
 
 다음은 사용자 정의 응용 프로그램의 예입니다.
 
 * [작업자 기본](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic)
 * [노동자 동물 사진](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-animal-pictures)
 
-### 템플릿 사용자 지정 응용 프로그램 {#template-custom-application}
+### 템플릿 사용자 지정 애플리케이션 {#template-custom-application}
 
 [worker-basic](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic)은 템플릿 응용 프로그램입니다. 원본 파일을 복사하여 렌디션을 생성합니다. 이 애플리케이션의 콘텐츠는 aio 앱을 만들 때 `Adobe Asset Compute`을 선택할 때 받은 템플릿입니다.
 
@@ -169,7 +169,7 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
-## 외부 API {#call-external-api} 호출
+## 외부 API 호출 {#call-external-api}
 
 애플리케이션 코드에서는 애플리케이션 처리에 도움이 되도록 외부 API 호출을 수행할 수 있습니다. 외부 API를 호출하는 예제 애플리케이션 파일은 아래에 있습니다.
 
@@ -191,7 +191,7 @@ exports.main = worker(async function (source, rendition) {
 >For extra authorization for these API calls, see [custom authorization checks](#custom-authorization-checks).
 -->
 
-### 사용자 지정 매개 변수 {#pass-custom-parameters} 전달
+### 사용자 지정 매개 변수 전달 {#pass-custom-parameters}
 
 사용자정의 매개변수를 변환 객체를 통해 전달할 수 있습니다. [`rendition` instructions](https://github.com/adobe/asset-compute-sdk#rendition)에서 응용 프로그램 내에서 참조할 수 있습니다. 변환 개체의 예는 다음과 같습니다.
 
@@ -270,7 +270,7 @@ SECRET_KEY=secret-value
 const key = params.secretKey;
 ```
 
-## 응용 프로그램 크기 조정 {#sizing-workers}
+## 애플리케이션 크기 조정 {#sizing-workers}
 
 애플리케이션은 `manifest.yml`를 통해 구성할 수 있는 [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md)를 사용하여 [!DNL Adobe I/O] Runtime의 컨테이너에서 실행됩니다.
 

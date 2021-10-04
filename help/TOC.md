@@ -7,16 +7,10 @@ role: Developer
 user-guide-title: asset compute 서비스 안내서
 user-guide-description: '이 설명서에서는 사용자 지정 코드 개발, 관리, 배포 및 문제 해결 방법과 같은 작업을 다룹니다. [!DNL Asset Compute Service] '
 breadcrumb-title: asset compute 서비스 안내서
-breadcrumb-url: /docs/asset-compute/using/home.html
-solution-title: AEM Assets
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html
-getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
-tutorials-title: AEM 자습서
-tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
-source-git-commit: 3f306f2006ba1520ea5266a93a7912720f96b412
+source-git-commit: c4f224a2ee99e78018a7a3f43ec59907f05ea4ef
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 13%
+source-wordcount: '98'
+ht-degree: 12%
 
 ---
 

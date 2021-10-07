@@ -2,9 +2,9 @@
 title: ' [!DNL Asset Compute Service] 소개'
 description: '[!DNL Asset Compute Service] 는 복잡성을 줄이고 확장성을 향상시키는 클라우드 기반의 자산 처리 서비스입니다.'
 exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 >
 >현재 [!DNL Asset Compute Service]은 [!DNL Experience Manager]을 (를) 통해서만 [!DNL Cloud Service] 를 사용할 수 있습니다. 관리자는 [!DNL Asset Compute Service] 을 호출하여 처리할 자산을 전달할 수 있는 처리 프로필을 만듭니다. [자산 마이크로서비스 및 처리 프로필 사용](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)을 참조하십시오.
 
-## 지원되는 [!DNL Asset Compute Service] {#possible-use-cases-benefits} 사용 사례
+## 지원되는 [!DNL Asset Compute Service] 사용 사례 {#possible-use-cases-benefits}
 
-[!DNL Asset Compute Service] 에서는 기본 이미지 처리와 같은 몇 가지 일반적인 비즈니스 사용 사례를 지원합니다.Adobe 애플리케이션별 전환복잡한 비즈니스 요구 사항을 조율하는 맞춤형 애플리케이션 제작
+[!DNL Asset Compute Service] 에서는 기본 이미지 처리와 같은 몇 가지 일반적인 비즈니스 사용 사례를 지원합니다. Adobe 애플리케이션별 전환 복잡한 비즈니스 요구 사항을 조율하는 맞춤형 애플리케이션 제작
 
 [!DNL Asset Compute] 웹 서비스를 사용하여 지원되는 [파일 형식](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)에 대한 고품질 이미지 렌더링과 다양한 파일 형식에 대한 축소판 그림을 생성할 수 있습니다. 사용자 지정 구성](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)을 통해 지원되는 [사용 사례를 참조하십시오.
 
@@ -47,7 +47,6 @@ ht-degree: 0%
 >* [자산 마이크로서비스를 사용한 자산 처리 개요  [!DNL Adobe Experience Manager] 는  [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)입니다.
 >* [Project Firefly 설명서](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 >* [처리에 지원되는 파일 형식](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
->* [asset compute 서비스의 릴리스 노트](release-notes.md)
 
 
 <!-- **TBD:**

@@ -2,9 +2,9 @@
 title: 사용자 정의 애플리케이션의 작업 이해
 description: 내부 작업 [!DNL Asset Compute Service] 작동 방식을 이해하는 데 도움이 되는 사용자 지정 애플리케이션입니다.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: 07e87c57e57f18f4d6e34ca8529d5598b0b12f3d
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ curl -X POST \
 }
 ```
 
-다음 [!DNL Asset Compute Service] 사용자 지정 응용 프로그램 렌디션 요청을 사용자 지정 응용 프로그램으로 보냅니다. 제공된 애플리케이션 URL에 HTTP POST을 사용합니다. URL은 Project App Builder의 보안 웹 작업 URL입니다. 모든 요청은 HTTPS 프로토콜을 사용하여 데이터 보안을 극대화합니다.
+다음 [!DNL Asset Compute Service] 사용자 지정 응용 프로그램 렌디션 요청을 사용자 지정 응용 프로그램으로 보냅니다. 제공된 애플리케이션 URL에 HTTP POST을 사용합니다. URL은 App Builder의 보안 웹 작업 URL입니다. 모든 요청은 HTTPS 프로토콜을 사용하여 데이터 보안을 극대화합니다.
 
 다음 [asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) 사용자 지정 애플리케이션에서 사용하는 는 HTTP POST 요청을 처리합니다. 또한 소스 다운로드, 표현물 업로드, 전송을 처리합니다 [!DNL Adobe I/O] 이벤트 및 오류 처리.
 

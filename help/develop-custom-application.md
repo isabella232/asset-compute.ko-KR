@@ -2,9 +2,9 @@
 title: 개발 대상 [!DNL Asset Compute Service]
 description: 을 사용하여 사용자 정의 애플리케이션 만들기 [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a50a3bdb520cbe608c5710716df80ac6e3b486e5
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 반드시 을(를) 확인하십시오 [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) 로컬에 설치되었습니다.
 
-1. 사용자 정의 응용 프로그램을 만들려면 [app Builder 프로젝트 만들기](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). 이렇게 하려면 를 실행합니다 `aio app init <app-name>` 터미널.
+1. 사용자 정의 응용 프로그램을 만들려면 [app Builder 프로젝트 만들기](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). 이렇게 하려면 를 실행합니다 `aio app init <app-name>` 터미널.
 
-   아직 로그인하지 않은 경우 이 명령은 브라우저에 로그인하라는 메시지를 표시합니다 [Adobe Developer 콘솔](https://console.adobe.io/) Adobe ID 사용. 자세한 내용은 [여기](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) cli에서 로그인에 대한 자세한 정보.
+   아직 로그인하지 않은 경우 이 명령은 브라우저에 로그인하라는 메시지를 표시합니다 [Adobe Developer 콘솔](https://console.adobe.io/) Adobe ID 사용. 자세한 내용은 [여기](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) cli에서 로그인에 대한 자세한 정보.
 
-   Adobe은 로그인하는 것을 권장합니다. 문제가 있는 경우 지침을 따르십시오 [로그인하지 않고 앱을 만들려면](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe은 로그인하는 것을 권장합니다. 문제가 있는 경우 지침을 따르십시오 [로그인하지 않고 앱을 만들려면](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. 로그인한 후 CLI의 지시에 따라 다음을 선택합니다 `Organization`, `Project`, 및 `Workspace` 을 입력합니다. 만들 때 만든 프로젝트 및 작업 공간을 선택합니다 [환경 설정](setup-environment.md). 메시지가 표시되면 `Which extension point(s) do you wish to implement ?`, 을 선택해야 합니다. `DX Asset Compute Worker`:
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 1. 화면의 나머지 부분에 따라 Visual Studio 코드(또는 즐겨찾는 코드 편집기)에서 새 응용 프로그램을 엽니다. 사용자 지정 애플리케이션에 대한 스캐폴딩과 샘플 코드가 포함되어 있습니다.
 
-   자세한 내용은 여기 를 참조하십시오. [App Builder 앱의 기본 구성 요소](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
+   자세한 내용은 여기 를 참조하십시오. [App Builder 앱의 기본 구성 요소](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
    템플릿 응용 프로그램은 [asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) 애플리케이션 표현물의 업로드, 다운로드 및 오케스트레이션의 경우, 개발자가 사용자 지정 애플리케이션 로직만 구현하면 됩니다. 내부 `actions/<worker-name>` 폴더, `index.js` 파일은 사용자 지정 애플리케이션 코드를 추가할 위치입니다.
 

@@ -2,10 +2,10 @@
 title: 에 필요한 개발 환경 설정 [!DNL Asset Compute Service]
 description: 에 대한 개발자 환경 설정 [!DNL Asset Compute Service] 사용자 지정 코드 만들기 및 테스트를 시작하려면 다음을 수행하십시오.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: 2b690ce37c0bac58abcb745e0b82018541434659
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '357'
+ht-degree: 1%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 을 개발할 수 있는 설정을 만들려면 [!DNL Asset Compute Service], 다음 요구 사항 및 지침을 따르십시오.
 
-1. [액세스 및 자격 증명 획득](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) 대상 [!DNL Project Firefly].
+1. [액세스 및 자격 증명 획득](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials) 대상 [!DNL Adobe Developer App Builder].
 
-1. [로컬 환경 설정](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) 필요한 도구를 제공합니다.
+1. [로컬 환경 설정](https://developer.adobe.com/app-builder/docs/getting_started/#local-environment-set-up) 필요한 도구를 제공합니다.
 
 1. 원활한 개발을 시작하는 데 도움이 되는 몇 가지 추가 도구는 다음과 같습니다.
 

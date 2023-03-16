@@ -2,9 +2,9 @@
 title: 개발 대상 [!DNL Asset Compute Service]
 description: 을 사용하여 사용자 정의 애플리케이션 만들기 [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
    $ aio app init <app-name>
    Retrieving information from [!DNL Adobe I/O] Console.
    ? Select Org My Adobe Org
-   ? Select Project MyFireflyProject
+   ? Select Project MyAdobe Developer App BuilderProject
    ? Which extension point(s) do you wish to implement ? (Press <space> to select, <a>
    to toggle all, <i> to invert selection)
    ❯◯ DX Experience Cloud SPA
@@ -100,7 +100,7 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 1. Adobe Developer 콘솔에서 파일을 다운로드합니다. 프로젝트의 루트로 이동하고 오른쪽 위 모서리에 있는 &quot;Download All&quot;을 클릭합니다. 파일은 로 다운로드됩니다. `<namespace>-<workspace>.json` 를 파일 이름으로 지정합니다. 다음 중 하나를 수행하십시오.
 
    * 파일 이름을 다음으로 변경합니다. `console.json` 프로젝트의 루트로 이동합니다.
-   * 선택적으로 Adobe Developer 콘솔 통합 JSON 파일에 절대 경로를 추가할 수 있습니다. 이것은 같다 [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) project workspace에서 다운로드한 파일입니다.
+   * 선택적으로 Adobe Developer 콘솔 통합 JSON 파일에 절대 경로를 추가할 수 있습니다. 이것은 같다 [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) project workspace에서 다운로드한 파일입니다.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=

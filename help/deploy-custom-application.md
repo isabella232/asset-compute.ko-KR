@@ -2,9 +2,9 @@
 title: 배포 [!DNL Asset Compute Service] 사용자 지정 애플리케이션
 description: 배포 [!DNL Asset Compute Service] 사용자 지정 애플리케이션입니다.
 exl-id: a68d4f59-8a8f-43b2-8bc6-19320ac8c9ef
-source-git-commit: 129651ba432b75703bc27baa7081da60302f828d
+source-git-commit: 50f69e16772cee7f79a812f2b86f0ef0221db369
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '190'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 URL을 [의 처리 프로필 [!DNL Experience Manager] 로서의 [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) 응용 프로그램을 [!DNL Experience Manager] 로서의 [!DNL Cloud Service].
 
-App Builder 프로젝트 및 작업 공간이 [!DNL Experience Manager] 로서의 [!DNL Cloud Service] 작업을 사용할 환경입니다. 개발, 스테이징 및 프로덕션에 대한 환경이 다릅니다. 를 확인하여 환경을 확인할 수 있습니다 `AIO_runtime_*` Firefly 애플리케이션 루트의 ENV 파일 내에 정의된 자격 증명입니다. 예를 들어 `Stage` 작업 공간, `AIO_runtime_namespace` 의 형식은 입니다 `xxxxxx_xxxxxxxxx_stage`. 을 사용하여 [!DNL Experience Manager] 로서의 [!DNL Cloud Service] 프로덕션 환경에서 Firefly의 애플리케이션 URL을 사용합니다 `Production` 작업 공간.
+App Builder 프로젝트 및 작업 공간이 [!DNL Experience Manager] 로서의 [!DNL Cloud Service] 작업을 사용할 환경입니다. 개발, 스테이징 및 프로덕션에 대한 환경이 다릅니다. 를 확인하여 환경을 확인할 수 있습니다 `AIO_runtime_*` Adobe Developer App Builder 애플리케이션 루트의 ENV 파일 내에 정의된 자격 증명입니다. 예를 들어 `Stage` 작업 공간, `AIO_runtime_namespace` 의 형식은 입니다 `xxxxxx_xxxxxxxxx_stage`. 을 사용하여 [!DNL Experience Manager] 로서의 [!DNL Cloud Service] 프로덕션 환경에서 Adobe Developer App Builder의 애플리케이션 URL 사용 `Production` 작업 공간.
 
 >[!CAUTION]
 >

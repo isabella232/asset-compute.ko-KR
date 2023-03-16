@@ -1,10 +1,10 @@
 ---
 title: 소개 [!DNL Asset Compute Service]
-description: '"[!DNL Asset Compute Service] 는 복잡성을 줄이고 확장성을 향상시키는 클라우드 기반의 자산 처리 서비스입니다."'
+description: "[!DNL Asset Compute Service] 는 복잡성을 줄이고 확장성을 향상시키는 클라우드 기반의 자산 처리 서비스입니다."
 exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
-source-git-commit: 93d3b407c8875888f03bec673d0a677a3205cfbb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '309'
 ht-degree: 6%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 6%
 
 [!DNL Asset Compute Service] 는 확장 가능한 서비스 [!DNL Adobe Experience Cloud] 디지털 자산을 처리합니다. 이미지, 비디오, 문서 및 기타 파일 형식을 축소판, 추출된 텍스트 및 메타데이터, 아카이브 등의 다양한 변환으로 변환할 수 있습니다.
 
-개발자는 사용자 지정 자산 애플리케이션(사용자 지정 작업자라고도 함)을 플러그인으로 사용하여 사용자 지정 사용 사례를 처리할 수 있습니다. 서비스는 [!DNL Adobe I/O] 런타임. 확장 가능합니다 [!DNL Project Firefly] Node.js로 작성된 헤드리스 앱. 이러한 API는 이미지 작업을 수행하거나 활용하기 위해 외부 API를 호출하는 등의 사용자 지정 작업을 수행할 수 있습니다 [!DNL Adobe Sensei] 지원.
+개발자는 사용자 지정 자산 애플리케이션(사용자 지정 작업자라고도 함)을 플러그인으로 사용하여 사용자 지정 사용 사례를 처리할 수 있습니다. 서비스는 [!DNL Adobe I/O] 런타임. 확장 가능합니다 [!DNL Adobe Developer App Builder] Node.js로 작성된 헤드리스 앱. 이러한 API는 이미지 작업을 수행하거나 활용하기 위해 외부 API를 호출하는 등의 사용자 지정 작업을 수행할 수 있습니다 [!DNL Adobe Sensei] 지원.
 
-[!DNL Project Firefly] 은 웹 환경에서 사용자 정의 웹 애플리케이션을 작성하고 배포하는 프레임워크입니다 [!DNL Adobe I/O] Adobe Experience Cloud 솔루션을 확장할 런타임. 개발자는 사용자 정의 응용 프로그램을 만들기 위해 [!DNL React Spectrum] (Adobe의 UI 툴킷), 마이크로 서비스 만들기, 사용자 지정 이벤트 만들기 및 API 오케스트레이션. 자세한 내용은 [Project Firefly 설명서](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Adobe Developer App Builder] 은 웹 환경에서 사용자 정의 웹 애플리케이션을 작성하고 배포하는 프레임워크입니다 [!DNL Adobe I/O] Adobe Experience Cloud 솔루션을 확장할 런타임. 개발자는 사용자 정의 응용 프로그램을 만들기 위해 [!DNL React Spectrum] (Adobe의 UI 툴킷), 마이크로 서비스 만들기, 사용자 지정 이벤트 만들기 및 API 오케스트레이션. 자세한 내용은 [Adobe Developer App Builder 설명서](https://developer.adobe.com/app-builder/docs/overview/).
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ ht-degree: 6%
 >[!MORELIKETHIS]
 >
 >* [의 자산 마이크로서비스 사용 자산 처리 개요 [!DNL Adobe Experience Manager] 로서의 [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
->* [Project Firefly 설명서](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+>* [Adobe Developer App Builder 설명서](https://developer.adobe.com/app-builder/docs/overview).
 >* [처리에 지원되는 파일 형식](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 

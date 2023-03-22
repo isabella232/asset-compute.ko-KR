@@ -2,9 +2,9 @@
 title: 사용자 정의 애플리케이션의 작업 이해
 description: 내부 작업 [!DNL Asset Compute Service] 작동 방식을 이해하는 데 도움이 되는 사용자 지정 애플리케이션입니다.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2af710443cdc2e5e25e105eca6e779eb58631ae9
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 클라이언트가 사용자 지정 애플리케이션을 사용하여 디지털 자산을 처리할 때 종단 간 워크플로우를 이해하려면 다음 그림을 사용합니다.
 
-![사용자 지정 애플리케이션 워크플로우](assets/customworker.png)
+![사용자 지정 애플리케이션 워크플로우](assets/customworker.svg)
 
 *그림: 을 사용하여 자산을 처리하는 절차 [!DNL Asset Compute Service].*
 

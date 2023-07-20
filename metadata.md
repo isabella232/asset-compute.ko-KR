@@ -8,12 +8,13 @@ getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-
 tutorials-title: Tutorials
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 mini-toc-levels: 2
+feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.ko-KR
 index: y
-source-git-commit: 5f987f28fdf8d074ceb6226d21a5f64aad67bf04
+source-git-commit: 66bad4afdc7b08e1e91418ec320b061e47c3683d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '130'
+ht-degree: 89%
 
 ---
 
@@ -27,7 +28,7 @@ metadata.md 파일에는 보고서에서 사용 안내서 TOC.md 파일로 전�
 | solution-title | 문서 헤더에서 링크로 사용됨 |
 | solution-hub-url | 지원 허브 페이지를 엽니다. |
 | solution-icon | 솔루션 제목 옆에 솔루션 아이콘을 표시합니다. 아직 구현되지 않음 |
-| getting-started-url | 시작 페이지에 대한 링크 |
+| getting-started-url | 시작 페이지 링크 |
 | tutorials-url | 비디오 튜토리얼 링크—helpx 튜토리얼 또는 KT 튜토리얼 |
 | mini-toc-levels | 오른쪽 레일에 나타나는 제목 수준 수를 결정합니다. 기본값은 2입니다. |
 | git-repo | 내부 사용을 위한 마스터 보고서의 위치를 지정합니다. |
